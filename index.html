@@ -1,31 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <title>Arlagården Plus</title>
-    <link href="./css/style.css" rel="stylesheet"/>
+    <link href="./css/style.css" rel="stylesheet" />
 </head>
+
 <body>
-    
+
 
     <header>
         <p class="header-logo">Arlagården <span>Plus</span></p>
-        
+
         <ul id="headernav" class="header-nav">
             <li class="selected"><a href="#oversigt" class="nav-links">Oversigt</a></li>
-            <li ><a href="#registerings-historik" class="nav-links">Registerings historik</a> </li>
-            <li ><a href="#sammenlign" class="nav-links">Sammenlign</a> </li>
-            <li ><a href="#hall-of-farms" class="nav-links">Hall of farms</a></li>
+            <li><a href="#registerings-historik" class="nav-links">Registerings historik</a> </li>
+            <li><a href="#sammenlign" class="nav-links">Sammenlign</a> </li>
+            <li><a href="#hall-of-farms" class="nav-links">Hall of farms</a></li>
             <div id="navSelection" class="selection"></div>
         </ul>
 
         <button class="btn main-btn">Registre kvartal</button>
     </header>
 
-    <div class="heading-photo"></div>
+    <div class="heading-photo">
+        <img class="vp-photo" src="./images/arla-transport-truck.jpg" alt="Arla lastbil forlader Arla fabrik">
+    </div>
+
+    <div class="progress-bar-container">
+        <div id="progress" class="progress-active" value="0"></div>
+        <div class="progress-default">
+            <div class="waypoint part1"> 
+                <svg viewBox="0 0 130.2 130.2">
+                    <polyline class="path check" fill="none"  stroke-width="20" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 27.8,65.5 "/>
+                </svg>
+            </div>
+            <div class="waypoint part2">
+                <p class="waypoint-title">CO2</p>
+                <svg viewBox="0 0 130.2 130.2">
+                    <polyline class="path check" fill="none"  stroke-width="20" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 27.8,65.5 "/>
+                </svg>
+            </div>
+            <div class="waypoint part3">
+                <p class="waypoint-title">Dyr</p>
+                <svg viewBox="0 0 130.2 130.2">
+                    <polyline class="path check" fill="none"  stroke-width="20" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 27.8,65.5 "/>
+                </svg>
+            </div>
+            <div class="waypoint part4">
+                <p class="waypoint-title">Foder</p>
+                <svg viewBox="0 0 130.2 130.2">
+                    <polyline class="path check" fill="none"  stroke-width="20" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 27.8,65.5 "/>
+                </svg>
+            </div>
+            <div class="waypoint part5">
+                <p class="waypoint-title">Energi</p>
+                <svg viewBox="0 0 130.2 130.2">
+                <polyline class="path check" fill="none"  stroke-width="20" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 27.8,65.5 "/>
+            </svg>
+            </div>
+        </div>
+        <!-- <progress value="0" max="100">25%</progress> -->
+    </div>
+
+    <button id="next">Next ></button>
 
     <h1>Opsumering</h1>
 
@@ -35,7 +78,7 @@
     <div class="qustions">
         <h3>Høst</h3>
         <ul>
-            <li> 
+            <li>
                 <p>The total amount of animal in your barn </p>
 
                 <div class="user-answar">
@@ -43,7 +86,7 @@
                     <span>Cows</span>
                 </div>
             </li>
-            <li> 
+            <li>
                 <p>The total amount of animal in your barn </p>
 
                 <div class="user-answar">
@@ -51,7 +94,7 @@
                     <span>Cows</span>
                 </div>
             </li>
-            <li> 
+            <li>
                 <p>The total amount of animal in your barn </p>
 
                 <div class="user-answar">
@@ -59,7 +102,7 @@
                     <span>Cows</span>
                 </div>
             </li>
-            <li> 
+            <li>
                 <p>The total amount of animal in your barn </p>
 
                 <div class="user-answar">
@@ -72,7 +115,7 @@
     <div class="qustions">
         <h3>Mad</h3>
         <ul>
-            <li> 
+            <li>
                 <p>The total amount of animal in your barn </p>
 
                 <div class="user-answar">
@@ -80,7 +123,7 @@
                     <span>Cows</span>
                 </div>
             </li>
-            <li> 
+            <li>
                 <p>The total amount of animal in your barn </p>
 
                 <div class="user-answar">
@@ -88,7 +131,7 @@
                     <span>Cows</span>
                 </div>
             </li>
-            <li> 
+            <li>
                 <p>The total amount of animal in your barn </p>
 
                 <div class="user-answar">
@@ -96,7 +139,7 @@
                     <span>Cows</span>
                 </div>
             </li>
-            <li> 
+            <li>
                 <p>The total amount of animal in your barn </p>
 
                 <div class="user-answar">
@@ -107,10 +150,15 @@
         </ul>
     </div>
 
-    <button>Færdig 
+    <button class="btn">Færdig
         <img src="./images/arrow-right.svg" alt="right arrow icon">
     </button>
 
+
+
+
+
     <script src="./js/main.js"></script>
 </body>
+
 </html>

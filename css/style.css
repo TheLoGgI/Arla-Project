@@ -6,6 +6,7 @@
 
     --bg-color: #F0F0F0;
     --main-dark: #006A38;
+    --main-light: #99B87B;
 }
 
 
@@ -75,7 +76,7 @@ header li {
     left: 0%;
     height: 4px;
     /* bottom: -.8em; */
-    top: 50px;
+    top: 45px;
     border-radius: 2px;
     user-select: none;
     
@@ -84,3 +85,99 @@ header li {
 .nav-links:hover {
     color: var(--main-dark);
 }
+
+.vp-photo {
+    
+    background-color: pink;
+}
+
+.vp-photo {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+    margin: 4rem 10rem;
+    position: relative;
+}
+
+.waypoint {
+    border: 4px solid var(--main-dark);
+    background-color: white;
+    display: inline-block;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: -.8em;
+}
+
+
+.waypoint::before {
+    content: '';
+    background-color: var(--main-dark);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .2s ease;
+}
+
+.waypoint-done::before {
+    transform: translate(-50%, -50%) scale(2);
+}
+
+.waypoint svg {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    left: 0px;
+    /* fill: black; */
+    stroke: transparent;
+    transition: stroke .5s ease;
+}
+
+.waypoint-title {
+    position: absolute;
+    display: inline-block;
+    bottom: 2em;
+    left: -1.5em;
+}
+
+.part2 {
+    left: 25%;
+}
+.part3 {
+    left: 50%;
+}
+.part4 {
+    left: 75%;
+}
+.part5 {
+    left: 100%;
+}
+
+.progress-default {
+    width: 100%;
+    height: 5px;
+    background-color: var(--main-light);
+}
+
+.progress-active {
+    width: 0%;
+    height: 5px;
+    position: relative;
+    top: 5px;
+    background-color: var(--main-dark);
+    transition: width .5s ease;
+    border-radius: 2px;
+    /* transform: scaleX(1);
+    transform-origin: left; */
+}
+
