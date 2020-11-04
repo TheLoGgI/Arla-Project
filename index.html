@@ -32,127 +32,71 @@
         <img class="vp-photo" src="./images/arla-transport-truck.jpg" alt="Arla lastbil forlader Arla fabrik">
     </div>
 
-    <div class="progress-bar-container">
-        <div id="progress" class="progress-active" value="0"></div>
+    <div class="progress-bar-container" title="Progress bar">
+        <div id="progress" role="progressbar" class="progress-active" aria-valuenow="0" aria-valuemin="0"
+            aria-valuemax="100"></div>
         <div class="progress-default">
-            <div class="waypoint part1"> 
+            <div class="waypoint part1 current-point">
+                <p class="waypoint-title">Produktion</p>
                 <svg viewBox="0 0 130.2 130.2">
-                    <polyline class="path check" fill="none"  stroke-width="20" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 27.8,65.5 "/>
+                    <polyline class="path check" fill="none" stroke-width="20" stroke-miterlimit="10"
+                        points="100.2,40.2 51.5,88.8 27.8,65.5 " />
                 </svg>
             </div>
             <div class="waypoint part2">
                 <p class="waypoint-title">CO2</p>
                 <svg viewBox="0 0 130.2 130.2">
-                    <polyline class="path check" fill="none"  stroke-width="20" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 27.8,65.5 "/>
+                    <polyline class="path check" fill="none" stroke-width="20" stroke-miterlimit="10"
+                        points="100.2,40.2 51.5,88.8 27.8,65.5 " />
                 </svg>
             </div>
             <div class="waypoint part3">
                 <p class="waypoint-title">Dyr</p>
                 <svg viewBox="0 0 130.2 130.2">
-                    <polyline class="path check" fill="none"  stroke-width="20" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 27.8,65.5 "/>
+                    <polyline class="path check" fill="none" stroke-width="20" stroke-miterlimit="10"
+                        points="100.2,40.2 51.5,88.8 27.8,65.5 " />
                 </svg>
             </div>
             <div class="waypoint part4">
                 <p class="waypoint-title">Foder</p>
                 <svg viewBox="0 0 130.2 130.2">
-                    <polyline class="path check" fill="none"  stroke-width="20" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 27.8,65.5 "/>
+                    <polyline class="path check" fill="none" stroke-width="20" stroke-miterlimit="10"
+                        points="100.2,40.2 51.5,88.8 27.8,65.5 " />
                 </svg>
             </div>
             <div class="waypoint part5">
                 <p class="waypoint-title">Energi</p>
                 <svg viewBox="0 0 130.2 130.2">
-                <polyline class="path check" fill="none"  stroke-width="20" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 27.8,65.5 "/>
-            </svg>
+                    <polyline class="path check" fill="none" stroke-width="20" stroke-miterlimit="10"
+                        points="100.2,40.2 51.5,88.8 27.8,65.5 " />
+                </svg>
+            </div>
+            <div class="waypoint part6">
+                <p class="waypoint-title">Opsumering</p>
+                <svg viewBox="0 0 130.2 130.2">
+                    <polyline class="path check" fill="none" stroke-width="20" stroke-miterlimit="10"
+                        points="100.2,40.2 51.5,88.8 27.8,65.5 " />
+                </svg>
             </div>
         </div>
-        <!-- <progress value="0" max="100">25%</progress> -->
+
     </div>
 
-    <button id="next">Next ></button>
+    <!-- <h1>Opsumering</h1> -->
 
-    <h1>Opsumering</h1>
+    <section class="topic">
+        <h2 id="topic__heading">Produktion</h2>
+        
+        <div class="accordion"></div>
+        <div class="accordion"></div>
+        <div class="accordion"></div>
+        
 
-    <div class="prosesbar"></div>
+        <button id="submitForms" class="btn">Færdig
+            <img src="./images/arrow-right.svg" alt="right arrow icon">
+        </button>
 
-    <h2>Produktion</h2>
-    <div class="qustions">
-        <h3>Høst</h3>
-        <ul>
-            <li>
-                <p>The total amount of animal in your barn </p>
-
-                <div class="user-answar">
-                    <input type="text">
-                    <span>Cows</span>
-                </div>
-            </li>
-            <li>
-                <p>The total amount of animal in your barn </p>
-
-                <div class="user-answar">
-                    <input type="text">
-                    <span>Cows</span>
-                </div>
-            </li>
-            <li>
-                <p>The total amount of animal in your barn </p>
-
-                <div class="user-answar">
-                    <input type="text">
-                    <span>Cows</span>
-                </div>
-            </li>
-            <li>
-                <p>The total amount of animal in your barn </p>
-
-                <div class="user-answar">
-                    <input type="text">
-                    <span>Cows</span>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="qustions">
-        <h3>Mad</h3>
-        <ul>
-            <li>
-                <p>The total amount of animal in your barn </p>
-
-                <div class="user-answar">
-                    <input type="text">
-                    <span>Cows</span>
-                </div>
-            </li>
-            <li>
-                <p>The total amount of animal in your barn </p>
-
-                <div class="user-answar">
-                    <input type="text">
-                    <span>Cows</span>
-                </div>
-            </li>
-            <li>
-                <p>The total amount of animal in your barn </p>
-
-                <div class="user-answar">
-                    <input type="text">
-                    <span>Cows</span>
-                </div>
-            </li>
-            <li>
-                <p>The total amount of animal in your barn </p>
-
-                <div class="user-answar">
-                    <input type="text">
-                    <span>Cows</span>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    <button class="btn">Færdig
-        <img src="./images/arrow-right.svg" alt="right arrow icon">
-    </button>
+    </section>
 
 
 
