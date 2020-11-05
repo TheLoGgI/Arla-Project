@@ -1,0 +1,113 @@
+/* CSS Default */
+:root {
+
+    --font-heading: 'Arla Strong', "Monserrat", "Roboto", "Arial", sans-serif;
+    --font-paragrath: "Arla Interface", Helvetica, Arial, sans-serif;
+    --sm-fs: 1rem;
+    --ns-fs: 1.25rem;
+    --bg-fs: 1.25rem;
+
+    --bg-color: #F0F0F0;
+    --main-dark: #006A38;
+    --main-normal: #619661;
+    --main-light: #99B87B;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arla Interface", Helvetica, Arial, sans-serif;
+    font-size: var(--sm-fs);
+    background-color: var(--bg-color);
+}
+/*-------------------------header--------------------------------------*/
+.header-logo {
+    font-size: 1.4rem;
+    color: var(--main-dark); 
+    font-weight: 700;
+}
+
+.header-logo span {
+    color: black; 
+}
+
+header {
+    padding: .8rem 4rem;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header li {
+    display: inline-block;
+    padding: 0 1em;
+}
+
+.btn{
+    background-color: var(--main-dark);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: .5em 1em;
+}
+.normal-btn{  background-color: var(--main-normal);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: .5em 1em;}
+    
+.blank-btn{
+    border-radius: 4px;
+    border: none;
+    padding: .5em 1em;}
+    
+
+ 
+.btn > img {
+    margin-left: 1em;
+    height: 1em;
+}
+
+.header-nav {
+    display: block;
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+
+.nav-links {
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+.selection {
+    position: absolute;
+    background-color: var(--main-dark);
+    width: 30%;
+    left: 0%;
+    height: 4px;
+    /* bottom: -.8em; */
+    top: 45px;
+    border-radius: 2px;
+    user-select: none;
+    
+}
+
+.nav-links:hover {
+    color: var(--main-dark);
+}
+
+main{
+margin: 100px;
+}
+
