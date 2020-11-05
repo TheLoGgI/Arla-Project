@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>Arlagården Plus</title>
+    <link href="./css/hall-of-farms.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <header>
+        <p class="header-logo">Arlagården <span>Plus</span></p>
+
+        <ul id="headernav" class="header-nav">
+            <li class="selected"><a href="#oversigt" class="nav-links">Oversigt</a></li>
+            <li><a href="#registerings-historik" class="nav-links">Registerings historik</a> </li>
+            <li><a href="#sammenlign" class="nav-links">Sammenlign</a> </li>
+            <li><a href="#hall-of-farms" class="nav-links">Hall of farms</a></li>
+            <div id="navSelection" class="selection"></div>
+        </ul>
+
+        <button class="btn main-btn">Registre kvartal</button>
+    </header>
+
+    <div class="grid-box">
+
+        <div class="grid-item item1">
+            <h2>Hall of farms 2020</h2>
+        </div>
+
+        <div class="grid-item item2">
+            <button type="button" id="button"><img src="images/global-icon.png" id="icon"
+                    alt="flag-icon"><br>Global</button>
+        </div>
+
+        <div class="grid-item item3">
+            <button type="button" id="button"><img src="images/flag-icon.png" id="icon"
+                    alt="flag-icon"><br>Land</button>
+        </div>
+
+        <div class="grid-item item4">
+            <div class="dropdown">
+                <button onclick="dropDownFunction()" class="dropbtn">Danmark<img src="images/arrow.png" id="arrow-icon"
+                        alt="arrow"></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Danmark</a>
+                    <a href="#">Tyskland</a>
+                    <a href="#">Sverige</a>
+                    <a href="#">Norge</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item item5">
+            <div class="dropdown">
+                <button onclick="dropDownFunction2()" class="dropbtn">Region<img src="images/arrow.png" id="arrow-icon"
+                        alt="arrow"></button>
+                <div id="myDropdown2" class="dropdown-content">
+                    <a href="#">Nordjylland</a>
+                    <a href="#">Midtjylland</a>
+                    <a href="#">Syd Danmark</a>
+                    <a href="#">Sjælland</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item item6">
+            <div class="flex-container">
+                <div><b>Rank</b></div>
+                <div><b>Gård</b></div>
+                <div style="flex-basis: 200px"><b>Land</b></div>
+                <div style="flex-basis: 200px"><b>Region</b></div>
+                <div style="flex-basis: 200px"><b>C02 Reduktion</b></div>
+            </div>
+            <div class="grid-item item6">
+                <div class="flex-container2">
+                    <div>24</div>
+                    <div>Min Gård</div>
+                    <div style="flex-basis: 200px">Danmark</div>
+                    <div style="flex-basis: 200px">Nordjylland</div>
+                    <div style="flex-basis: 200px">2%</div>
+                </div>
+            </div>
+            <div class="grid-item item6">
+                <div class="flex-container3">
+                    <div>1</div>
+                    <div>Den glade gård</div>
+                    <div style="flex-basis: 200px">Danmark</div>
+                    <div style="flex-basis: 200px">Midtjylland</div>
+                    <div style="flex-basis: 200px">30%</div>
+                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                            alt="arrow">Historie</button>
+                    <button type="button" id="rank-btn2">Sammenlign</button>
+                </div>
+            </div>
+            <div class="grid-item item6">
+                <div class="flex-container3">
+                    <div>2</div>
+                    <div>Økogården</div>
+                    <div style="flex-basis: 200px">Danmark</div>
+                    <div style="flex-basis: 200px">Midtjylland</div>
+                    <div style="flex-basis: 200px">29%</div>
+                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                            alt="arrow">Historie</button>
+                    <button type="button" id="rank-btn2">Sammenlign</button>
+                </div>
+            </div>
+            <div class="grid-item item6">
+                <div class="flex-container3">
+                    <div>3</div>
+                    <div>Gyllegården</div>
+                    <div style="flex-basis: 200px">Danmark</div>
+                    <div style="flex-basis: 200px">Syd Danmark</div>
+                    <div style="flex-basis: 200px">26%</div>
+                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                            alt="arrow">Historie</button>
+                    <button type="button" id="rank-btn2">Sammenlign</button>
+                </div>
+            </div>
+            <div class="grid-item item6">
+                <div class="flex-container3">
+                    <div>4</div>
+                    <div>Solgården</div>
+                    <div style="flex-basis: 200px">Danmark</div>
+                    <div style="flex-basis: 200px">Nordjylland</div>
+                    <div style="flex-basis: 200px">25%</div>
+                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                            alt="arrow">Historie</button>
+                    <button type="button" id="rank-btn2">Sammenlign</button>
+                </div>
+            </div>
+            <div class="grid-item item6">
+                <div class="flex-container3">
+                    <div>5</div>
+                    <div>Gram slot</div>
+                    <div style="flex-basis: 200px">Danmark</div>
+                    <div style="flex-basis: 200px">Nordjylland</div>
+                    <div style="flex-basis: 200px">24%</div>
+                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                            alt="arrow">Historie</button>
+                    <button type="button" id="rank-btn2">Sammenlign</button>
+                </div>
+            </div>
+            <div class="grid-item item6">
+                <div class="flex-container3">
+                    <div>6</div>
+                    <div>Kastanjegården</div>
+                    <div style="flex-basis: 200px">Danmark</div>
+                    <div style="flex-basis: 200px">Midtjylland</div>
+                    <div style="flex-basis: 200px">23%</div><button type="button" id="rank-btn1"><img
+                            src="images/arrow2.png" id="arrow-icon2" alt="arrow">Historie</button>
+                    <button type="button" id="rank-btn2">Sammenlign</button>'
+                </div>
+            </div>
+            <div class="grid-item item6">
+                <div class="flex-container3">
+                    <div>7</div>
+                    <div>Solsikkegården</div>
+                    <div style="flex-basis: 200px">Danmark</div>
+                    <div style="flex-basis: 200px">Sjælland</div>
+                    <div style="flex-basis: 200px">20%</div>
+                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                            alt="arrow">Historie</button>
+                    <button type="button" id="rank-btn2">Sammenlign</button>
+                </div>
+            </div>
+            <div class="grid-item item6">
+                <div class="flex-container3">
+                    <div>8</div>
+                    <div>Peters gård</div>
+                    <div style="flex-basis: 200px">Danmark</div>
+                    <div style="flex-basis: 200px">Syd Danmark</div>
+                    <div style="flex-basis: 200px">19%</div>
+                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                            alt="arrow">Historie</button>
+                    <button type="button" id="rank-btn2">Sammenlign</button>
+                </div>
+            </div>
+            <div class="grid-item item6">
+                <div class="flex-container3">
+                    <div>9</div>
+                    <div>Husomgaard</div>
+                    <div style="flex-basis: 200px">Danmark</div>
+                    <div style="flex-basis: 200px">Syd Danmark</div>
+                    <div style="flex-basis: 200px">18%</div>
+                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                            alt="arrow">Historie</button>
+                    <button type="button" id="rank-btn2">Sammenlign</button>
+                </div>
+            </div>
+            <div class="grid-item item6">
+                <div class="flex-container3">
+                    <div>10</div>
+                    <div>Ryomgård</div>
+                    <div style="flex-basis: 200px">Danmark</div>
+                    <div style="flex-basis: 200px">Nordjylland</div>
+                    <div style="flex-basis: 200px">15%</div>
+                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                            alt="arrow">Historie</button>
+                    <button type="button" id="rank-btn2">Sammenlign</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/hall-of-farms.js"></script>
+</body>
+
+</html>

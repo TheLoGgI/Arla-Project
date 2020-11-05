@@ -1,0 +1,273 @@
+/* CSS Default */
+:root {
+
+    --font-heading: 'Arla Strong', "Monserrat", "Roboto", "Arial", sans-serif;
+    --font-paragrath: "Arla Interface", Helvetica, Arial, sans-serif;
+    --sm-fs: 1rem;
+    --ns-fs: 1.25rem;
+    --bg-fs: 1.25rem;
+
+    --bg-color: #F0F0F0;
+    --main-dark: #006A38;
+    --main-normal: #619661;
+    --main-light: #99B87B;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arla Interface", Helvetica, Arial, sans-serif;
+    font-size: var(--sm-fs);
+    background-color: var(--bg-color);
+}
+
+.header-logo {
+    font-size: 1.4rem;
+    color: var(--main-dark); 
+    font-weight: 700;
+}
+
+.header-logo span {
+    color: black; 
+}
+
+header {
+    padding: .8rem 4rem;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header li {
+    display: inline-block;
+    padding: 0 1em;
+}
+
+.btn{
+    background-color: var(--main-dark);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+}
+
+.btn > img {
+    margin-left: 1em;
+    height: 1em;
+}
+
+.header-nav {
+    display: block;
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+
+.nav-links {
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+.selection {
+    position: absolute;
+    background-color: var(--main-dark);
+    width: 30%;
+    left: 0%;
+    height: 4px;
+    /* bottom: -.8em; */
+    top: 45px;
+    border-radius: 2px;
+    user-select: none;
+    
+}
+
+.nav-links:hover {
+    color: var(--main-dark);
+}
+
+.grid-box {
+    display: grid;
+    margin: 100px;
+    row-gap: 20px;
+}
+
+.item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+.item2 {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+}
+
+.item3 {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+
+.item4 {
+    grid-column: 3 / span 2;
+    grid-row: 2;
+}
+
+.item5 {
+    grid-column: 3 / span 2;
+    grid-row: 3;
+}
+
+.item6 {
+    grid-column: 1 / span 20;
+    grid-row: 8;
+}
+
+#button {
+    color: white;
+    background-color: #096B3B;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+}
+
+#icon {
+    width: 30px;
+}
+
+#arrow-icon {
+    height: 17px;
+    float: right;
+    padding-right: 15px;
+}
+
+#arrow-icon2 {
+    height: 14px;
+    margin-right: 5px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: white;
+  color: #096B3B;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 180px;
+  height: 30px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.show {display:block;}
+
+/* rank liste */
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  background-color: #096B3B;
+  height: 50px;
+  border-radius: 5px 5px 0px 0px;
+  margin-bottom: 10px;
+}
+
+.flex-container > div {
+  color: white;
+  width: 150px;
+  line-height: 50px;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.flex-container2 {
+  display: flex;
+  align-items: stretch;
+  background-color: #99B87B;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.flex-container2 > div {
+  width: 150px;
+  line-height: 50px;
+  font-size: 17px;
+  margin-left: 20px;
+}
+
+.flex-container3 {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.flex-container3 > div {
+  width: 150px;
+  line-height: 50px;
+  font-size: 17px;
+  margin-left: 20px;
+}
+
+#rank-btn1 {
+    background-color: #006A38;
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#rank-btn2 {
+    background-color:white;
+    color: #006A38;
+    margin: 5px;
+    padding: 10px;
+    border-color: #006A38;
+    border-radius: 5px;
+    width: 100px;
+    cursor: pointer;
+}
