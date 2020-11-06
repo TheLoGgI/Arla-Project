@@ -1,0 +1,148 @@
+/* CSS Default */
+:root {
+
+    --font-heading: 'Arla Strong', "Monserrat", "Roboto", "Arial", sans-serif;
+    --font-paragrath: "Arla Interface", Helvetica, Arial, sans-serif;
+    --sm-fs: 1rem;
+    --ns-fs: 1.25rem;
+    --bg-fs: 1.25rem;
+
+    --bg-blocks: #FFFFFF;
+    --bg-color: #F0F0F0;
+    --main-dark: #006A38;
+    --main-normal: #619661;
+    --main-light: #99B87B;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arla Interface", Helvetica, Arial, sans-serif;
+    font-size: var(--sm-fs);
+    background-color: var(--bg-color);
+}
+
+/*-------------------------header--------------------------------------*/
+.header-logo {
+    font-size: 1.4rem;
+    color: var(--main-dark);
+    font-weight: 700;
+}
+
+.header-logo span {
+    color: black;
+}
+
+header {
+    padding: .8rem 4rem;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header li {
+    display: inline-block;
+    padding: 0 1em;
+}
+
+.btn {
+    background-color: var(--main-dark);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: .5em 1em;
+}
+
+.normal-btn {
+    background-color: var(--main-normal);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: .8em 1em;
+}
+
+.blank-btn {
+    background-color: var(--bg-blocks);
+    border-radius: 4px;
+    border: none;
+    padding: .8em 1em;
+}
+
+
+
+.btn > img {
+    margin-left: 1em;
+    height: 1em;
+}
+
+.header-nav {
+    display: block;
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+
+.nav-links {
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+.selection {
+    position: absolute;
+    background-color: var(--main-dark);
+    width: 30%;
+    left: 0%;
+    height: 4px;
+    /* bottom: -.8em; */
+    top: 45px;
+    border-radius: 2px;
+    user-select: none;
+
+}
+
+.nav-links:hover {
+    color: var(--main-dark);
+}
+
+main {
+    margin: 60px 100px 0 100px;
+}
+#plus-img{width: 2rem}
+#plus-tekst{margin-left: 1rem}
+
+#registre-nyt-kvartal-plus {
+    display: flex;
+    align-items: center;
+    margin: 0 0 3.5rem 0
+}
+
+/*-------------------------graf-block--------------------------------------*/
+
+#oversigt-headline{
+    margin: 0 0 2rem 0  
+}
+
+#sammenligning-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: .8rem;
+     box-shadow: 0px 0px 1px .2px #314040;
+}
+#emne-knap{display: flex;
+align-items: center;
+}
+
+.arrow-right{margin-right: .5rem;
+width: .5rem}
+/*-------------------------oversigter-block--------------------------------------*/
