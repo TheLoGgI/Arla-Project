@@ -7,6 +7,7 @@
     --ns-fs: 1.25rem;
     --bg-fs: 1.25rem;
 
+    --bg-blocks: #FFFFFF;
     --bg-color: #F0F0F0;
     --main-dark: #006A38;
     --main-normal: #619661;
@@ -25,15 +26,16 @@ body {
     font-size: var(--sm-fs);
     background-color: var(--bg-color);
 }
+
 /*-------------------------header--------------------------------------*/
 .header-logo {
     font-size: 1.4rem;
-    color: var(--main-dark); 
+    color: var(--main-dark);
     font-weight: 700;
 }
 
 .header-logo span {
-    color: black; 
+    color: black;
 }
 
 header {
@@ -53,26 +55,31 @@ header li {
     padding: 0 1em;
 }
 
-.btn{
+.btn {
     background-color: var(--main-dark);
     color: white;
     border-radius: 4px;
     border: none;
     padding: .5em 1em;
 }
-.normal-btn{  background-color: var(--main-normal);
+
+.normal-btn {
+    background-color: var(--main-normal);
     color: white;
     border-radius: 4px;
     border: none;
-    padding: .5em 1em;}
-    
-.blank-btn{
+    padding: .8em 1em;
+}
+
+.blank-btn {
+    background-color: var(--bg-blocks);
     border-radius: 4px;
     border: none;
-    padding: .5em 1em;}
-    
+    padding: .8em 1em;
+}
 
- 
+
+
 .btn > img {
     margin-left: 1em;
     height: 1em;
@@ -100,14 +107,42 @@ header li {
     top: 45px;
     border-radius: 2px;
     user-select: none;
-    
+
 }
 
 .nav-links:hover {
     color: var(--main-dark);
 }
 
-main{
-margin: 100px;
+main {
+    margin: 60px 100px 0 100px;
+}
+#plus-img{width: 2rem}
+#plus-tekst{margin-left: 1rem}
+
+#registre-nyt-kvartal-plus {
+    display: flex;
+    align-items: center;
+    margin: 0 0 3.5rem 0
 }
 
+/*-------------------------graf-block--------------------------------------*/
+
+#oversigt-headline{
+    margin: 0 0 2rem 0  
+}
+
+#sammenligning-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: .8rem;
+     box-shadow: 0px 0px 1px .2px #314040;
+}
+#emne-knap{display: flex;
+align-items: center;
+}
+
+.arrow-right{margin-right: .5rem;
+width: .5rem}
+/*-------------------------oversigter-block--------------------------------------*/
