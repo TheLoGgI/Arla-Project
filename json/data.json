@@ -1,37 +1,134 @@
-    [
+
+[
     {
-        "id": 0,
-        "label" : "The total amount of animal in your barn ",
-        "unit": "Cows"
-    },
-    {
-        "id": 1,
-        "label" : "The total amount of animal in your barn ",
-        "unit": "Cows"
-    },
-    {
-        "id": 2,
-        "label" : "The total amount of animal in your barn ",
-        "unit": "Cows"
-    },
-    {
-        "id": 3,
-        "label" : "The total amount of animal in your barn ",
-        "unit": "Cows"
-    },
-    {
-        "id": 4,
-        "label" : "The total amount of animal in your barn ",
-        "unit": "Cows"
-    },
-    {
-        "id": 5,
-        "label" : "The total amount of animal in your barn ",
-        "unit": "Cows"
-    },
-    {
-        "id": 6,
-        "label" : "The total amount of animal in your barn ",
-        "unit": "Cows"
+    "maintopic": "Produktion",
+    "questionnaire": {
+        "subcategory" : [
+            {
+                "category": "Landbrug",
+                "qustions": [
+                    {
+                        "id": 0,
+                        "question" : "Hvornår bør der ikke strøs kunstgødning?",
+                        "placeholder": "",
+                        "unit": "år"
+                    },
+                    {
+                        "id": 1,
+                        "question" : "Hvilken jordtype er mest udsat for kobbermangel?",
+                        "placeholder": "type",
+                        "unit": ""
+                    },
+                    {
+                        "id": 2,
+                        "question" : "Hvorledes begrænses kvælstoftab ved udvaskning mest effektivt?",
+                        "placeholder": "",
+                        "unit": "kg"
+                    },
+                    {
+                        "id": 3,
+                        "question" : "Hvilken kulturplante er en dårligste forfrugt for vinterhvede?",
+                        "placeholder": "",
+                        "unit": "kg"
+                    }
+                ]
+            },
+            {
+                "category": "Husdyr",
+                "qustions": [
+                    {
+                        "id": 0,
+                        "question" : "Hvornår bør der ikke strøs kunstgødning?",
+                        "placeholder": "",
+                        "unit": "år"
+                    },
+                    {
+                        "id": 1,
+                        "question" : "Hvilken jordtype er mest udsat for kobbermangel?",
+                        "placeholder": "type",
+                        "unit": ""
+                    },
+                    {
+                        "id": 2,
+                        "question" : "Hvorledes begrænses kvælstoftab ved udvaskning mest effektivt?",
+                        "placeholder": "",
+                        "unit": "kg"
+                    },
+                    {
+                        "id": 3,
+                        "question" : "Hvilken kulturplante er en dårligste forfrugt for vinterhvede?",
+                        "placeholder": "",
+                        "unit": "kg"
+                    }
+                ]
+            }
+        ]
     }
+    },
+    {
+        "maintopic": "CO2",
+        "questionnaire": {
+            "subcategory" : [
+                {
+                    "category": "Landbrug",
+                    "qustions": [
+                        {
+                            "id": 0,
+                            "question" : "Hvornår bør der ikke strøs kunstgødning?",
+                            "placeholder": "",
+                            "unit": "år"
+                        },
+                        {
+                            "id": 1,
+                            "question" : "Hvilken jordtype er mest udsat for kobbermangel?",
+                            "placeholder": "type",
+                            "unit": ""
+                        },
+                        {
+                            "id": 2,
+                            "question" : "Hvorledes begrænses kvælstoftab ved udvaskning mest effektivt?",
+                            "placeholder": "",
+                            "unit": "kg"
+                        },
+                        {
+                            "id": 3,
+                            "question" : "Hvilken kulturplante er en dårligste forfrugt for vinterhvede?",
+                            "placeholder": "",
+                            "unit": "kg"
+                        }
+                    ]
+                },
+                {
+                    "category": "Husdyr",
+                    "qustions": [
+                        {
+                            "id": 0,
+                            "question" : "Hvornår bør der ikke strøs kunstgødning?",
+                            "placeholder": "",
+                            "unit": "år"
+                        },
+                        {
+                            "id": 1,
+                            "question" : "Hvilken jordtype er mest udsat for kobbermangel?",
+                            "placeholder": "type",
+                            "unit": ""
+                        },
+                        {
+                            "id": 2,
+                            "question" : "Hvorledes begrænses kvælstoftab ved udvaskning mest effektivt?",
+                            "placeholder": "",
+                            "unit": "kg"
+                        },
+                        {
+                            "id": 3,
+                            "question" : "Hvilken kulturplante er en dårligste forfrugt for vinterhvede?",
+                            "placeholder": "",
+                            "unit": "kg"
+                        }
+                    ]
+                }
+            ]
+        }
+        }
+
 ]

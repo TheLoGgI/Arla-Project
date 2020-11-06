@@ -21,10 +21,12 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: "Arla Interface", Helvetica, Arial, sans-serif;
     font-size: var(--sm-fs);
     background-color: var(--bg-color);
+    /* scroll-behavior: smooth; */
 }
 
 .header-logo {
@@ -43,6 +45,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 ul {
@@ -62,11 +65,47 @@ header li {
     padding: 1em 2em;
     display: flex;
     align-items: center;
+    transition: all .3s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #f68b28;
+    color: black;
 }
 
 .btn > img {
     margin-left: 1em;
     height: 1em;
+}
+
+.complete-btn {
+    margin: 2rem 0 5rem 0;
+    float: right;
+}
+
+.button-shake {
+    animation: shake .3s ease 0s;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+        background-color: red;
+    }
+
+    75% {
+        transform: rotate(5deg);
+        background-color: red;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        background-color: red;
+    }
 }
 
 .header-nav {
@@ -84,14 +123,14 @@ header li {
 .selection {
     position: absolute;
     background-color: var(--main-dark);
-    width: 30%;
+    width: 80px;
     left: 0%;
     height: 4px;
     /* bottom: -.8em; */
-    top: 45px;
+    top: 50px;
     border-radius: 2px;
     user-select: none;
-    
+    transform: translateX(500px);
 }
 
 .nav-links:hover {
@@ -212,14 +251,25 @@ header li {
     transform-origin: left; */
 }
 
+
+
 /* Qustions for section */
-.topic h2 {
-    margin-left: 10rem;
+.topic {
+    margin: 0rem 10rem;
+}
+
+.topic-qustions {
+    min-height: 600px;
+    transition: transform 1s ease-in-out;
+}
+
+.leave {
+ transform: translateX(-200%);   
 }
 
 .accordion {
     /* background-color: white; */
-    margin: 1rem 10rem;
+    margin: 1rem 0rem;
     /* padding: 2em 2em; */
     border-radius: 3px;
     transition: height .4s ease;
@@ -343,3 +393,4 @@ header li {
     top: .3rem;
     position: absolute;
 } */
+

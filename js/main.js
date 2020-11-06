@@ -77,39 +77,107 @@ window.addEventListener('resize', () => moveSelection())
 
 // Progress Bar
 const waypoints = document.querySelectorAll('.waypoint')
-let progresionLevel = -1
-// document.getElementById('progress').setAttribute('value', '0%')
-document.getElementById('submitForms').addEventListener('click', progress)
+let progresionLevel = 0
+let isTasksDone = false
+const mainTopicLabel = ['Produktion','CO2', 'Dyr', 'Foder', 'Energi', 'Opsumering']
+const mainTopicImages = []
 
-function progress() {
+document.getElementById('submitForms').addEventListener('click', e => {
+
+    const button = e.target
+    console.log(button);
+    if (!isTasksDone) {
+        classToggle('button-shake', button)
+
+        setTimeout(() => {
+            classToggle('button-shake', button)
+        }, 300)
+    } else {
+        progress('increase')
+        
+        const topicHeading = document.getElementById('topicHeading') 
+        shiftLettering(topicHeading, mainTopicLabel[progresionLevel])
+
+        const questionSection = document.getElementById('topicQuistions')
+        questionSection.style.transform = 'translateX(-150%)'
+        setTimeout(() => {
+            questionSection.innerHTML = ''
+            insertAccordions()
+            questionSection.style.transition = 'none'
+            questionSection.style.transform = 'translateX(150%)'
+            setTimeout(() => { 
+                questionSection.removeAttribute('style')
+                // Set height to auto
+            }, 500)
+        }, 500)
+        isTasksDone = false
+    }
+
+})
+
+function progress(action) {
     const barProgres = document.getElementById('progress')
-    const currentValue = Number(barProgres.getAttribute('aria-valuenow')) + 20
+    const procesValue = Number(barProgres.getAttribute('aria-valuenow'))
+    const interval = 20
 
-    if (currentValue <= 100) {
-        document.getElementById('progress').style.width = `${currentValue}%`
-        barProgres.setAttribute('aria-valuenow', currentValue)
-    
-        if (currentValue % 20 === 0) {
-            progresionLevel++
-            activateWaypoint(waypoints[progresionLevel])
-            waypoints[progresionLevel + 1].classList.add('current-point')
-        }
+    switch (action) {
+        case 'increase': 
+            if (procesValue <= 100 - interval) {
+                const currentValue = Number(barProgres.getAttribute('aria-valuenow')) + interval
+                document.getElementById('progress').style.width = `${currentValue}%`
+                barProgres.setAttribute('aria-valuenow', currentValue)
+                progresionLevel++
+                waypoints[progresionLevel].classList.add('current-point')
 
-    } 
+        
+            } 
+            break
+        
+        case 'decrease': 
+            if (procesValue >= interval) {
+                        const currentValue = Number(barProgres.getAttribute('aria-valuenow')) - interval
+                        document.getElementById('progress').style.width = `${currentValue}%`
+                        barProgres.setAttribute('aria-valuenow', currentValue)
+                        progresionLevel--
+
+                        waypoints[progresionLevel + 1].classList.remove('current-point')
+                
+                    } 
+            break
+
+        case 'check':
+                activateWaypoint(waypoints[progresionLevel])
+                break
+
+        case 'uncheck':
+            deactivateWaypoint(waypoints[progresionLevel])
+            waypoints[progresionLevel + 1].classList.remove('current-point')
+            break
+
+
+    }
     
-    if(currentValue === 100) {
+    // Chekcmarks the last point in the progress, when reached
+    if(procesValue === 100) {
         activateWaypoint(waypoints[waypoints.length-1])
     } 
 
 }
 
+// Checkmarks waypoint in progressbar
 function activateWaypoint(waypoint) {
-    waypoint.classList.toggle('waypoint-done')
+    waypoint.classList.add('waypoint-done')
     waypoint.children[1].style.stroke = 'white'
 }
+function deactivateWaypoint(waypoint) {
+    if (waypoint.classList.contains('waypoint-done')) {
+        waypoint.classList.remove('waypoint-done')
+        waypoint.children[1].style.stroke = 'none'
+    }
+}
+
 
 function classToggle(className, element) {
-    // console.log(typeof element, element);
     if (typeof element === 'object') {
         element.classList.toggle(className)
         return element
@@ -121,32 +189,20 @@ function classToggle(className, element) {
     return null
 }
 
-    // category=27 animals
-    // category=28 vehicles
     // Fetching random triva qustions to fill out the questions pannel
     async function trivaQustions(categoryInt = 27) {
     const lookupCategories = await (await fetch('../json/lookup_triva_categories.json')).json()
-    console.log(lookupCategories);
-    
 
     const randomTriva = await (await fetch(`https://opentdb.com/api.php?amount=10&category=${categoryInt + 9}`)).json()
     randomTriva.category = lookupCategories[categoryInt].name
-    // randomTriva.category = "Klaus koldskål"
+    
     return randomTriva
 }
 
 
-( async () => {
-    const questionsSection = document.querySelectorAll('.accordion')
-    console.log(questionsSection);
-
-    for (const qustionsElement of questionsSection) {
-        
-
-    const {category, results} = await trivaQustions(Math.floor(Math.random() * 23))
-    // console.log(category, results);
-
+function accordionString(category, data) {
     let accordionHead = `
+    <div class="accordion">
     <div class="accordion__head">
                 <div class="accordion__heading">
                     <svg width="10.215" height="16.338" viewBox="0 0 10.215 16.338">
@@ -168,7 +224,7 @@ function classToggle(className, element) {
                 <ul class="accordion__qustions-list" role="form" aria-labelledby="topic_label st1_label">`
 
     let accordionBody = ''
-    for (const triva of results) {
+    for (const triva of data) {
         accordionBody += `
         <li class="accordion__qustion">
             <label>${triva.question}</label>
@@ -178,49 +234,98 @@ function classToggle(className, element) {
     }
     
     accordionBody += `
-        </ul>
-        <input type="submit" class="btn qustions-save" value="Gem">
-    </form>`
+            </ul>
+            <input type="submit" class="btn qustions-save" value="Gem">
+        </form>
+    </div>`
+    
 
-    qustionsElement.innerHTML = accordionHead + accordionBody
+    return accordionHead + accordionBody
 }
 
-// formsubmitting prevention
-const forms = document.querySelectorAll('form')
-preventDefaultEvent(forms)
+async function insertAccordions() {
+    const questionsSection = document.getElementById('topicQuistions')
+    const randomInt = Math.ceil(Math.random() * 3)
+    console.log(randomInt);
+    for (let i = 0; i < randomInt; i++) {
+        const {category, results} = await trivaQustions(Math.floor(Math.random() * 23))
+        const htmlAccordion = accordionString(category, results)
+        questionsSection.insertAdjacentHTML('afterbegin', htmlAccordion)
+    }
 
-const collapse = document.querySelectorAll('.accordion__head')
-collapseHandler(collapse)
+    // init isAllComplete listner on heads
+    const collapse = document.querySelectorAll('.accordion__head')
+    collapsHandler(collapse)
 
-})()
+    // formsubmitting prevention and init isAllComplete listner
+    const forms = document.querySelectorAll('form')
+    collapsSubmit(forms, collapse)
+
+}
+
+// Initial load
+insertAccordions()
 
 
 
-function preventDefaultEvent(formCollection) {
+function collapsSubmit(formCollection, acordions) {
     formCollection.forEach( form => 
         form.addEventListener('submit', e => {
             e.preventDefault()
             classToggle('qustions-complete', form.parentNode)
+            isAllComplete(acordions)
         }))
 }
 
 
-
-function collapseHandler(acordions) {
-    const acordionsArray = [...acordions].map(item => item.parentNode)
-
-    acordions.forEach( accordion => 
+function collapsHandler(acordions) {
+    acordions.forEach( accordion => {
         accordion.addEventListener('click', e => {
-
             classToggle('qustions-complete', accordion.parentNode)
+            isAllComplete(acordions)
+        })
+    })
+    
+}
 
-            if (isAllChecked(acordionsArray)) {
-                progress()
-            }
-            
-        }))
+function isAllComplete(acordions) {
+    const acordionsArray = [...acordions].map(item => item.parentNode)
+    
+    if (isAllChecked(acordionsArray)) {
+        progress('check')
+        isTasksDone = true
+    } else {
+        progress('uncheck')
+        isTasksDone = false
+    }
+    
 }
 
 function isAllChecked(acordions) {
     return [...acordions].every(element => element.classList.contains('qustions-complete'))
+}
+
+// Change topic heading
+function shiftLettering(heading, text) {
+
+    const currentText = heading.textContent.split('')
+    const newTextArray = text.split('')
+    const longest = Math.max(currentText.length, newTextArray.length)
+
+    newTextArray.length = longest
+
+
+    let i = 0
+    const interval = setInterval(() => {
+        currentText[i] = newTextArray[i]
+        i++
+
+        heading.textContent = currentText.join('')
+
+        if (i === longest) {
+            clearInterval(interval)
+        }
+    }, 100)
+
+
 }
