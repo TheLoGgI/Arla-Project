@@ -36,7 +36,7 @@
         <section class="oversigt-section" id="oversigt-graf-container">
             <h2 id="oversigt-headline">Oversigt</h2>
             <div class="graf-element" id="sammenligning-box">
-                <div><button class="normal-btn" id="emne-knap"><img src="images/arrow-left.svg" class="arrow">Skjul emner</button></div>
+                <div><button class="normal-btn" id="emne-knap" onclick="skjulEmner()">Skjul emner</button></div>
                 <div>
                     <div>
                         <button class="blank-btn">Gem samling</button>
@@ -47,7 +47,7 @@
 
 
             </div>
-            <div class="graf-element" id="emne-box">
+            <div class="graf-element1" id="emne-box">
                 <div id="emne-soegecontainer">
                     <input type="text" placeholder="Søg emner" name="search" class="searchbar">
 
@@ -104,7 +104,7 @@
 
 
             </div>
-            <div class="graf-element" id="graf-box"></div>
+            <div class="graf-element" id="graf"></div>
             <div class="graf-element" id=""></div>
 
 
@@ -119,5 +119,6 @@
 
 
     <script src="./js/main.js"></script>
+    <script src="./js/chart.js"></script>
     <script src="./js/oversigt.js"></script>
 </body></html>

@@ -12,7 +12,7 @@
     --main-dark: #006A38;
     --main-normal: #619661;
     --main-light: #99B87B;
-    
+
     --shadow: 0px 0px 0.6px .2px #314040;
 }
 
@@ -145,7 +145,7 @@ main {
     justify-content: space-between;
     background-color: var(--bg-white);
     padding: .8rem;
-    box-shadow:var(--shadow)
+    box-shadow: var(--shadow)
 }
 
 #emne-knap {
@@ -154,16 +154,33 @@ main {
 }
 
 .arrows {
-   transition: 0.3s; 
+    transition: 0.3s;
 }
 
-#emne-box{width: 50%}
+.arrow {
+    padding: 0 .5rem 0 0
+}
+
+.graf-element1 {
+    width: 20%;
+        overflow: hidden;
+             transition: 0.2s;
+}
+
+.emne-hidden {
+    width: 0px;
+    padding: 0;
+     transition: 0.2s;
+}
 
 #emne-soegecontainer {
-   background-color: var(--bg-white);
+    background-color: var(--bg-white);
     padding: 1rem;
-     box-shadow: var(--shadow)
+    box-shadow: var(--shadow)
 }
+
+
+
 
 .searchbar {
     width: 100%;
@@ -177,7 +194,7 @@ main {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    background-color:var(--main-normal);
+    background-color: var(--main-normal);
     color: white;
     margin: .5px 0;
     cursor: pointer;
@@ -206,11 +223,16 @@ main {
     display: flex;
     align-items: baseline:
 }
-#emne-graa{background-color: var(--bg-color)} 
+
+#emne-graa {
+    background-color: var(--bg-color)
+}
 
 
-.dyr-arrow-flip {transform: scale(-1);
-    transition: 0.3s;}
+.dyr-arrow-flip {
+    transform: scale(-1);
+    transition: 0.3s;
+}
 
 
 
@@ -224,7 +246,7 @@ main {
     font-weight: bold;
     float: right;
     margin-left: 5px;
-} 
+}
 
 .active-emne:after {}
 
