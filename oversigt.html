@@ -8,6 +8,7 @@
     <meta name="viewport"
         content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <title>Arlagården Plus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
     <link href="./css/oversigt.css" rel="stylesheet" />
 </head>
 
@@ -99,7 +100,11 @@
             <div class="graf-element" id="graf"></div>
             <div class="graf-element" id=""></div>
         </section>
+
+        <!-- Small overviews -->
         <section id="other-overviews-section">
+
+            <!-- Overview-box-1 -->
             <div id="box-1" class="overview-box-container">
                 <div class="info-button-container">
                     <p class="info-button">i</p>
@@ -107,7 +112,7 @@
                 <p id="box-1-intro-text">Arla har et mål om at reducere CO2-udledningen<br>med 30% procent inden 2030
                 </p>
                 <h4 id="box-1-result-text">Din gård har reduceret<br>CO2-udledingen med:</h4>
-                <h3 id="box-1-result-percentage">6%</h3>
+                <h3 id="box-1-result-percentage">10%</h3>
                 <div id="co2-progress-bar">
                     <div id="bar"></div>
                 </div>
@@ -116,34 +121,69 @@
                     <p class="bar-text">30%</p>
                 </div>
             </div>
+
+            <!-- Overview-box-2 -->
             <div id="box-2" class="overview-box-container">
                 <div class="info-button-container">
                     <p class="info-button">i</p>
                 </div>
                 <div class="devider">
-                    <div class="devided-container">
-
+                    <div id="power-graph-text-devider">
+                        <div class="power-text-group">
+                            <h4 clas="power-text-subject">Produceret Strøm:</h4>
+                            <h3 id="power-result-color-1" class="power-text-result">238 kWh</h3>
+                        </div>
+                        <div class="power-text-group">
+                            <h4 clas="power-text-subject">Produceret Strøm:</h4>
+                            <h3 id="power-result-color-2" class="power-text-result">238 kWh</h3>
+                        </div>
                     </div>
-                    <div class="devided-container">
-
+                    <div id="strøm-graf-container">
+                        <!-- Power graph -->
+                        <canvas id="power-graph"></canvas>
                     </div>
                 </div>
             </div>
+
+            <!-- Overview-box-3 -->
             <div id="box-3" class="overview-box-container">
                 <div class="info-button-container">
                     <p class="info-button">i</p>
                 </div>
+                <div class="small-box-deivider">
+                    <div id="smal-box-graph-container">
+                        <!-- Feed graph -->
+                        <canvas id="small-box-radial-graph"></canvas>
+                    </div>
+                    <div id="small-box-text-container">
+                        <div class="small-box-text-group">
+                            <div id="graph-color-code-1" class="graph-color-code"></div>
+                            <h3 class="feed-text">Produceret foder</h3>
+                        </div>
+                        <div class="small-box-text-group">
+                            <div id="graph-color-code-2" class="graph-color-code"></div>
+                            <h3 class="feed-text">Købt foder</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Overview-box-4 -->
             <div id="box-4" class="overview-box-container">
                 <div class="info-button-container">
                     <p class="info-button">i</p>
                 </div>
+                <div id="money-saved-container">
+                    <h3 id="money-saved-result">12.345 kr</h3>
+                    <h4 id="money-saved-text">Sparet pr. ton CO2</h4>
+                </div>
             </div>
+
         </section>
     </main>
-    <script src="./js/main.js"></script>
-    <script src="./js/chart.js"></script>
-    <script src="./js/oversigt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/oversigt.js"></script>
 </body>
 
 </html>

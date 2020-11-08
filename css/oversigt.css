@@ -11,6 +11,7 @@
     --main-dark: #006A38;
     --main-normal: #619661;
     --main-light: #99B87B;
+    --darkblue-color: #007595;
     --shadow: 0px 0px 0.6px .2px #314040;
 }
 
@@ -250,12 +251,12 @@ main {
 #other-overviews-section {
     margin-top: 5vh;
     margin-bottom: 10vh;
-    height: 40vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "box1 box2 box3" "box1 box2 box4";
     grid-gap: 1em;
+    grid-auto-rows: minmax(40vh, auto);
 }
 
 #box-1 {
@@ -330,7 +331,7 @@ main {
 }
 
 #bar {
-    width: 100%;
+    width: 33%;
     background-color: #619661;
     height: 100%;
     border-radius: 6px;
@@ -343,10 +344,112 @@ main {
     width: 90%;
 }
 
-/* ----------Box-1-content------------- */
+/* ----------Box-2-content------------- */
 
 .devider {
     display: flex;
+    width: 100%;
+    height: 88%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.devided-container {}
+#power-graph-text-devider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 60%;
+}
+
+.power-text-group {}
+
+.power-text-subject {}
+
+.power-text-result {
+    font-size: 1.8em;
+    font-weight: 800;
+}
+
+#power-result-color-1 {
+    color: #619661;
+}
+
+#power-result-color-2 {
+    color: #007595;
+}
+
+#strøm-graf-container {
+    width: 50%;
+}
+
+#power-graph {
+    display: none;
+    width: 40%;
+}
+
+/* ----------Box-3-content------------- */
+
+.small-box-deivider {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#smal-box-graph-container {
+    width: 40%;
+}
+
+#small-box-radial-graph {
+    width: 100%;
+    height: 100%;
+}
+
+#small-box-text-container {
+    width: 80%;
+}
+
+.small-box-text-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.graph-color-code {
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#graph-color-code-1 {
+    background-color: #619661;
+}
+
+#graph-color-code-2 {
+    background-color: #007595;
+}
+
+.feed-text {
+    font-size: 1.4em;
+}
+
+/* ----------Box-4-content------------- */
+
+#money-saved-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70%;
+}
+
+#money-saved-result {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #619661;
+}
+
+#money-saved-text {
+    font-size: 1.2em;
+}
