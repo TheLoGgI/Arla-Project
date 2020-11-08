@@ -1,0 +1,90 @@
+[
+  {
+    "Measurements": "('Cows', 'Feed consumption', 'kg dry matter pr year-cow')",
+    "year1": 8139.35,
+    "year2": 5568.238,
+    "year3": 6465.915,
+    "year4": 6083.323,
+    "year5": 5469.291
+  },
+  {
+    "Measurements": "('Herd', 'Milk production', 'kg milk pr year-cow')",
+    "year1": 10185.449,
+    "year2": 9075.765,
+    "year3": 9927.232,
+    "year4": 8830.039,
+    "year5": 7830.036
+  },
+  {
+    "Measurements": "('Herd', 'Year-cows', 'nr. of cows.')",
+    "year1": 51,
+    "year2": 50,
+    "year3": 49,
+    "year4": 51,
+    "year5": 50
+  },
+  {
+    "Measurements": "('Energy', 'Diesel', 'Litre')",
+    "year1": 8284,
+    "year2": 5880.06,
+    "year3": 11475.33,
+    "year4": 10353,
+    "year5": 9873
+  },
+  {
+    "Measurements": "('Energy', 'Electricity', kWh')",
+    "year1": 41640,
+    "year2": 67654,
+    "year3": 48613,
+    "year4": 45564,
+    "year5": 44975
+  },
+  {
+    "Measurements": "('Herd', 'Self-sufficiency in feed', '% of dry matter')",
+    "year1": 79.225,
+    "year2": 84.154,
+    "year3": 68.585,
+    "year4": 64.909,
+    "year5": 69.413
+  },
+  {
+    "Measurements": "('Diesel', 'Carbon dioxide', 'kg CO2 per kg milk')",
+    "year1": 0.032,
+    "year2": 0.027,
+    "year3": 0.052,
+    "year4": 0.046,
+    "year5": 0.048
+  },
+  {
+    "Measurements": "('Electricity and heating', 'Carbon dioxide', 'kg CO2 per kg milk')",
+    "year1": 0.031,
+    "year2": 0.066,
+    "year3": 0.046,
+    "year4": 0.037,
+    "year5": 0.048
+  },
+  {
+    "Measurements": "('Digestion, cows', 'Methane', 'kg CO2 per kg milk')",
+    "year1": 0.354,
+    "year2": 0.315,
+    "year3": 0.35,
+    "year4": 0.296,
+    "year5": 0.339
+  },
+  {
+    "Measurements": "('Imported feed','Carbon dioxide','kg CO2 per kg milk')",
+    "year1": 0.116,
+    "year2": 0.083,
+    "year3": 0.149,
+    "year4": 0.147,
+    "year5": 0.144
+  },
+  {
+    "Measurements": "('Carbon footprint for the whole  farm, 'Carbon dioxide', 'ton CO2')",
+    "year1": 504.462,
+    "year2": 445.563,
+    "year3": 464.516,
+    "year4": 399.7,
+    "year5": 370.858
+  }
+]

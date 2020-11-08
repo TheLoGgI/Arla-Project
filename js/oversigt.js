@@ -13,6 +13,7 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
+
 function flipArrowDyr() {
     const arrow = document.getElementById("dyr-arrow");
     arrow.classList.toggle("dyr-arrow-flip");
@@ -46,15 +47,12 @@ function flipArrowOeko() {
 
 function skjulEmner() {
     const emneNavn = document.getElementById("emne-knap")
-    const emneBox = document.querySelector(".graf-element1");
+    const emneBox = document.getElementById("emne-container")
     emneBox.classList.toggle("emne-hidden");
-    console.log(this);
    
     if (emneNavn.textContent === "Vis emner"){
         emneNavn.textContent = "Skjul emner"
-        
-    }
-else {
+    } else {
      emneNavn.textContent = "Vis emner"
     
 }
