@@ -210,11 +210,11 @@ main {
     text-align: left;
     outline: none;
     display: flex;
-    align-items: baseline:
+    align-items: baseline;
 }
 
 #emne-graa {
-    background-color: var(--bg-color)
+    background-color: var(--bg-color);
 }
 
 .dyr-arrow-flip {
