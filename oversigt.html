@@ -5,17 +5,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <title>Arlagården Plus</title>
     <link href="./css/oversigt.css" rel="stylesheet" />
 </head>
 
 <body>
-
-
     <header>
         <p class="header-logo">Arlagården <span>Plus</span></p>
-
         <ul id="headernav" class="header-nav">
             <li class="selected"><a href="#oversigt" class="nav-links">Oversigt</a></li>
             <li><a href="#registerings-historik" class="nav-links">Registerings historik</a> </li>
@@ -23,7 +21,6 @@
             <li><a href="#hall-of-farms" class="nav-links">Hall of farms</a></li>
             <div id="navSelection" class="selection"></div>
         </ul>
-
         <button class="btn main-btn">Registre kvartal</button>
     </header>
     <main>
@@ -43,82 +40,110 @@
                         <button class="normal-btn">samligner</button>
                     </div>
                 </div>
-
-
-
             </div>
             <div class="graf-element1" id="emne-box">
                 <div id="emne-soegecontainer">
                     <input type="text" placeholder="Søg emner" name="search" class="searchbar">
-
-
-
-
                 </div>
                 <div id="emne-container">
 
-
-                    <button class="emne-collapsible" onclick="flipArrowDyr()">Dyr<img src="images/Group%20180.svg" id="dyr-arrow" class="arrows"></button>
+                    <button class="emne-collapsible" onclick="flipArrowDyr()">Dyr<img src="images/Group%20180.svg"
+                            id="dyr-arrow" class="arrows"></button>
                     <div class="content">
-                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg"
+                                class="emne-arrow"></button>
                     </div>
 
-
-                    <button class="emne-collapsible" onclick="flipArrowMaelk()">Mælke production<img src="images/Group%20180.svg" id="maelk-arrow" class="arrows" ></button>
+                    <button class="emne-collapsible" onclick="flipArrowMaelk()">Mælke production<img
+                            src="images/Group%20180.svg" id="maelk-arrow" class="arrows"></button>
                     <div class="content">
-                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg"
+                                class="emne-arrow"></button>
                     </div>
 
-                    <button class="emne-collapsible" onclick="flipArrowEnergi()">Energi<img src="images/Group%20180.svg" id="energi-arrow" class="arrows"></button>
-                    <div class="content"> 
-                        <button class="emne" id="emne-graa">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
-                         <button class="emne" >Produceret strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
-                          <button class="emne" id="emne-graa">Diesel, liter<img src="images/Group%20233.svg" class="emne-arrow"></button>
-                           <button class="emne" >Benzin, liter<img src="images/Group%20233.svg" class="emne-arrow"></button>
-                    </div>
-
-                    <button class="emne-collapsible" onclick="flipArrowCo2()">Co2<img src="images/Group%20180.svg" id="co2-arrow" class="arrows"></button>
+                    <button class="emne-collapsible" onclick="flipArrowEnergi()">Energi<img src="images/Group%20180.svg"
+                            id="energi-arrow" class="arrows"></button>
                     <div class="content">
-                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                        <button class="emne" id="emne-graa">Købt strøm, kWh<img src="images/Group%20233.svg"
+                                class="emne-arrow"></button>
+                        <button class="emne">Produceret strøm, kWh<img src="images/Group%20233.svg"
+                                class="emne-arrow"></button>
+                        <button class="emne" id="emne-graa">Diesel, liter<img src="images/Group%20233.svg"
+                                class="emne-arrow"></button>
+                        <button class="emne">Benzin, liter<img src="images/Group%20233.svg" class="emne-arrow"></button>
                     </div>
 
-                    <button class="emne-collapsible" onclick="flipArrowFoder()">foder<img src="images/Group%20180.svg" id="foder-arrow" class="arrows"></button>
+                    <button class="emne-collapsible" onclick="flipArrowCo2()">Co2<img src="images/Group%20180.svg"
+                            id="co2-arrow" class="arrows"></button>
                     <div class="content">
-                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg"
+                                class="emne-arrow"></button>
                     </div>
 
-                    <button class="emne-collapsible" onclick="flipArrowOeko()">økomoni<img src="images/Group%20180.svg" id="oeko-arrow" class="arrows"></button>
+                    <button class="emne-collapsible" onclick="flipArrowFoder()">foder<img src="images/Group%20180.svg"
+                            id="foder-arrow" class="arrows"></button>
                     <div class="content">
-                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg"
+                                class="emne-arrow"></button>
                     </div>
-                    
-                
-                
 
+                    <button class="emne-collapsible" onclick="flipArrowOeko()">økomoni<img src="images/Group%20180.svg"
+                            id="oeko-arrow" class="arrows"></button>
+                    <div class="content">
+                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg"
+                                class="emne-arrow"></button>
+                    </div>
 
                 </div>
-
-
-
-
-
-
             </div>
             <div class="graf-element" id="graf"></div>
             <div class="graf-element" id=""></div>
-
-
         </section>
+        <section id="other-overviews-section">
+            <div id="box-1" class="overview-box-container">
+                <div class="info-button-container">
+                    <p class="info-button">i</p>
+                </div>
+                <p id="box-1-intro-text">Arla har et mål om at reducere CO2-udledningen<br>med 30% procent inden 2030
+                </p>
+                <h4 id="box-1-result-text">Din gård har reduceret<br>CO2-udledingen med:</h4>
+                <h3 id="box-1-result-percentage">6%</h3>
+                <div id="co2-progress-bar">
+                    <div id="bar"></div>
+                </div>
+                <div id="bar-text-container">
+                    <p class="bar-text">0%</p>
+                    <p class="bar-text">30%</p>
+                </div>
+            </div>
+            <div id="box-2" class="overview-box-container">
+                <div class="info-button-container">
+                    <p class="info-button">i</p>
+                </div>
+                <div class="devider">
+                    <div class="devided-container">
 
+                    </div>
+                    <div class="devided-container">
 
+                    </div>
+                </div>
+            </div>
+            <div id="box-3" class="overview-box-container">
+                <div class="info-button-container">
+                    <p class="info-button">i</p>
+                </div>
+            </div>
+            <div id="box-4" class="overview-box-container">
+                <div class="info-button-container">
+                    <p class="info-button">i</p>
+                </div>
+            </div>
+        </section>
     </main>
-
-
-
-
-
-
     <script src="./js/main.js"></script>
     <script src="./js/chart.js"></script>
     <script src="./js/oversigt.js"></script>
-</body></html>
+</body>
+
+</html>
