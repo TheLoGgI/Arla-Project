@@ -36,7 +36,7 @@
         <section class="oversigt-section" id="oversigt-graf-container">
             <h2 id="oversigt-headline">Oversigt</h2>
             <div class="graf-element" id="sammenligning-box">
-                <div><button class="normal-btn" id="emne-knap"><img src="images/arrow-right.svg" class="arrow-right">Vis emner</button></div>
+                <div><button class="normal-btn" id="emne-knap"><img src="images/arrow-left.svg" class="arrow">Skjul emner</button></div>
                 <div>
                     <div>
                         <button class="blank-btn">Gem samling</button>
@@ -47,9 +47,65 @@
 
 
             </div>
-            <div class="graf-element" id="emner-box">2</div>
-            <div class="graf-element" id="graf-box">3</div>
-            <div class="graf-element" id="">4</div>
+            <div class="graf-element" id="emne-box">
+                <div id="emne-soegecontainer">
+                    <input type="text" placeholder="Søg emner" name="search" class="searchbar">
+
+
+
+
+                </div>
+                <div id="emne-container">
+
+
+                    <button class="emne-collapsible" onclick="flipArrowDyr()">Dyr<img src="images/Group%20180.svg" id="dyr-arrow" class="arrows"></button>
+                    <div class="content">
+                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                    </div>
+
+
+                    <button class="emne-collapsible" onclick="flipArrowMaelk()">Mælke production<img src="images/Group%20180.svg" id="maelk-arrow" class="arrows" ></button>
+                    <div class="content">
+                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                    </div>
+
+                    <button class="emne-collapsible" onclick="flipArrowEnergi()">Energi<img src="images/Group%20180.svg" id="energi-arrow" class="arrows"></button>
+                    <div class="content"> 
+                        <button class="emne" id="emne-graa">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                         <button class="emne" >Produceret strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                          <button class="emne" id="emne-graa">Diesel, liter<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                           <button class="emne" >Benzin, liter<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                    </div>
+
+                    <button class="emne-collapsible" onclick="flipArrowCo2()">Co2<img src="images/Group%20180.svg" id="co2-arrow" class="arrows"></button>
+                    <div class="content">
+                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                    </div>
+
+                    <button class="emne-collapsible" onclick="flipArrowFoder()">foder<img src="images/Group%20180.svg" id="foder-arrow" class="arrows"></button>
+                    <div class="content">
+                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                    </div>
+
+                    <button class="emne-collapsible" onclick="flipArrowOeko()">økomoni<img src="images/Group%20180.svg" id="oeko-arrow" class="arrows"></button>
+                    <div class="content">
+                        <button class="emne" id="kwh">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                    </div>
+                    
+                
+                
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+            <div class="graf-element" id="graf-box"></div>
+            <div class="graf-element" id=""></div>
 
 
         </section>
@@ -63,4 +119,5 @@
 
 
     <script src="./js/main.js"></script>
+    <script src="./js/oversigt.js"></script>
 </body></html>

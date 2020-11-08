@@ -7,11 +7,13 @@
     --ns-fs: 1.25rem;
     --bg-fs: 1.25rem;
 
-    --bg-blocks: #FFFFFF;
+    --bg-white: #FFFFFF;
     --bg-color: #F0F0F0;
     --main-dark: #006A38;
     --main-normal: #619661;
     --main-light: #99B87B;
+    
+    --shadow: 0px 0px 0.6px .2px #314040;
 }
 
 
@@ -72,7 +74,7 @@ header li {
 }
 
 .blank-btn {
-    background-color: var(--bg-blocks);
+    background-color: var(--bg-white);
     border-radius: 4px;
     border: none;
     padding: .8em 1em;
@@ -117,8 +119,14 @@ header li {
 main {
     margin: 60px 100px 0 100px;
 }
-#plus-img{width: 2rem}
-#plus-tekst{margin-left: 1rem}
+
+#plus-img {
+    width: 2rem
+}
+
+#plus-tekst {
+    margin-left: 1rem
+}
 
 #registre-nyt-kvartal-plus {
     display: flex;
@@ -128,21 +136,106 @@ main {
 
 /*-------------------------graf-block--------------------------------------*/
 
-#oversigt-headline{
-    margin: 0 0 2rem 0  
+#oversigt-headline {
+    margin: 0 0 2rem 0
 }
 
 #sammenligning-box {
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: var(--bg-white);
     padding: .8rem;
-     box-shadow: 0px 0px 1px .2px #314040;
-}
-#emne-knap{display: flex;
-align-items: center;
+    box-shadow:var(--shadow)
 }
 
-.arrow-right{margin-right: .5rem;
-width: .5rem}
+#emne-knap {
+    display: flex;
+    align-items: center;
+}
+
+.arrows {
+   transition: 0.3s; 
+}
+
+#emne-box{width: 50%}
+
+#emne-soegecontainer {
+   background-color: var(--bg-white);
+    padding: 1rem;
+     box-shadow: var(--shadow)
+}
+
+.searchbar {
+    width: 100%;
+    padding: .8rem;
+    border: none;
+    background-color: var(--bg-color);
+}
+
+
+.emne-collapsible {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    background-color:var(--main-normal);
+    color: white;
+    margin: .5px 0;
+    cursor: pointer;
+    padding: .8rem;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+
+.emne-arrow {}
+
+.emne {
+    display: flex;
+    align-items: baseline:;
+    justify-content: space-between;
+    background-color: var(--bg-white);
+    color: ;
+    cursor: pointer;
+    padding: .8rem .8rem .8rem 1.5rem;
+    margin: 0 0 0 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    display: flex;
+    align-items: baseline:
+}
+#emne-graa{background-color: var(--bg-color)} 
+
+
+.dyr-arrow-flip {transform: scale(-1);
+    transition: 0.3s;}
+
+
+
+.active,
+.emne-collapsible:hover {
+    background-color: var(--main-dark);
+}
+
+.emne:after {
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+} 
+
+.active-emne:after {}
+
+
+
+.content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
 /*-------------------------oversigter-block--------------------------------------*/
