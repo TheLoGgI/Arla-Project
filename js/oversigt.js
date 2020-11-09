@@ -64,9 +64,6 @@ function skjulEmner() {
 
 
 
-
-
-
     const chartElectical = new Chart(document.getElementById('power-graph'), {
         type: 'bar',
         data: {
@@ -198,39 +195,3 @@ function skjulEmner() {
             }
         }
     });
-function dataHandler(){
-    const emner = document.querySelectorAll(".emne");
-    console.log(emner);
-    for(const emne of emner){
-        emne.addEventListener("click", e=> {
-            
-            console.log(e.currentTarget.textContent)
-            replaceData()
-        } )
-        
-    }
-}
-
-
-
-dataHandler()
-
-function getData(){
-     
-    fetch("../json/csvjson.json") 
-        .then(response => response.json())
-        .then(data=> console.log(data))  
-        
-        
-    
-    
-}
-
-function replaceData(chart, data){
-    console.log(chart)
-    //chart.data.datasets = data.data
-    chart.data.labels = data.yearsLabel
-  
-    
-}
-replaceData(chartElectical, {})

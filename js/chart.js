@@ -1,6 +1,7 @@
 let ctx = document.getElementById('graf').getContext('2d');
+let chartData
 
-let grath = new Chart(ctx, {
+let chart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: ['2016', '2017', '2018', '2019', '2020'],
@@ -81,6 +82,36 @@ let grath = new Chart(ctx, {
     }
 });
 
-function getData() {
+function dataHandler(){
+    const emner = document.querySelectorAll(".emne");
+    console.log(emner);
+    for(const emne of emner){
+        emne.addEventListener("click", e=> {
+            
+            console.log(e.currentTarget.textContent)
+
+
+            // replaceData(chart, )
+        } )
+        
+    }
+}
+
+
+getData()
+dataHandler()
+
+function getData(){
+    fetch("../json/csvjson.json")
+        .then(response => response.json())
+        .then(data => console.log(data))  
+}
+
+function replaceData(chart, data){
+    console.log(chart)
+    //chart.data.datasets = data.data
+    chart.data.labels = data.yearsLabel
+  
     
 }
+

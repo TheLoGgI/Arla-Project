@@ -3,70 +3,69 @@
         "label": "Tørfoder per ko",
         "Measurements": "('Cows', 'Feed consumption', 'kg dry matter pr year-cow')",
         "yearsLabel": [2016, 2017, 2018, 2019, 2020],
-         "data": [8139.35,5568.238,6465.915,6083.323,5469.291],
-  },
+        "data": [8139.35,5568.238,6465.915,6083.323,5469.291],
+    },
     {
         "label": "Kg mælk per ko",
         "Measurements": "('Herd', 'Milk production', 'kg milk pr year-cow')",
         "yearsLabel": [2016, 2017, 2018, 2019, 2020],
-         "data": [10185.449,9075.765,9927.232,8830.039,7830.036],
-  },
+        "data": [10185.449,9075.765,9927.232,8830.039,7830.036],
+    },
     {
         "label": "Antal køer",
         "Measurements": "('Herd', 'Year-cows', 'nr. of cows.')",
         "yearsLabel": [2016, 2017, 2018, 2019, 2020],
-         "data": [51,50,49,51,50]
-  },
+        "data": [51,50,49,51,50]
+    },
     {
         "label": "Diesel, liter",
         "Measurements": "Litre",
         "yearsLabel": [2016, 2017, 2018, 2019, 2020],
-         "data": [8284,5880.06,11475.33,10353,9873]
-       
-  },
+        "data": [8284,5880.06,11475.33,10353,9873]
+    },
     {
         "label": "Produceret strøm",
         "Measurements": "kWh",
         "yearsLabel": [2016, 2017, 2018, 2019, 2020],
-         "data": [41640,67654,48613,45564,44975]
-  },
+        "data": [41640,67654,48613,45564,44975]
+    },
     {
         "label": "Tørfoder produceret",
         "Measurements": "('Herd', 'Self-sufficiency in feed', '% of dry matter')",
         "yearsLabel": [2016, 2017, 2018, 2019, 2020],
         "data": [79.225,84.154,68.585,64.909,69.413]
     
-  },
+    },
     {
         "label": "CO2 per diesel brugt",
         "Measurements": "('Diesel', 'Carbon dioxide', 'kg CO2 per kg milk')",
         "yearsLabel": [2016, 2017, 2018, 2019, 2020],
-         "data": [0.032,0.027, 0.052,0.046,0.048]
+        "data": [0.032,0.027, 0.052,0.046,0.048]
   },
     {
         "label": "CO2 per el brugt",
         "Measurements": "('Electricity and heating', 'Carbon dioxide', 'kg CO2 per kg milk')",
         "yearsLabel": [2016, 2017, 2018, 2019, 2020],
-         "data": [0.031,0.066,0.046,0.037,0.048]
+        "data": [0.031,0.066,0.046,0.037,0.048]
     
   },
     {
         "label": "Methan udledninger",
         "Measurements": "('Digestion, cows', 'Methane', 'kg CO2 per kg milk')",
         "yearsLabel": [2016, 2017, 2018, 2019, 2020],
-         "data": [0.354,0.315,0.35,0.296, 0.339]
+        "data": [0.354,0.315,0.35,0.296, 0.339]
 
   },
     {
         "label": "Importeret foder",
         "Measurements": "('Imported feed','Carbon dioxide','kg CO2 per kg milk')",
         "yearsLabel": [2016, 2017, 2018, 2019, 2020],
-         "data": [0.116,0.083,0.149,0.147,0.144]
+        "data": [0.116,0.083,0.149,0.147,0.144]
   },
     {
         "label": "Samlet CO2-aftryk",
         "Measurements": "('Carbon footprint for the whole  farm, 'Carbon dioxide', 'ton CO2')",
         "yearsLabel": [2016, 2017, 2018, 2019, 2020],
-         "data": [504.462,445.563,464.516,399.7,370.858]
+        "data": [504.462,445.563,464.516,399.7,370.858]
   }
 ]
