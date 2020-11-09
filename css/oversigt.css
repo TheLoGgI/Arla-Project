@@ -172,7 +172,7 @@ main {
     width: 25%;
     transition: 0.2s;
     max-height: 450px;
-        overflow: auto;
+        overflow:visible;
     direction:rtl;
 
     
@@ -220,6 +220,7 @@ main {
     outline: none;
     display: flex;
     align-items: baseline;
+    direction:ltr;
 }
 
 #emne-graa {
