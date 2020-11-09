@@ -5,12 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <meta name="viewport"
-        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <title>Arlagården Plus</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
     <link href="./css/oversigt.css" rel="stylesheet" />
-      <link href="./css/font-face.css" rel="stylesheet" />
+    <link href="./css/font-face.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -20,7 +19,7 @@
             <li class="selected"><a href="#oversigt" class="nav-links">Oversigt</a></li>
             <li><a href="#registerings-historik" class="nav-links">Registerings historik</a> </li>
             <li><a href="#sammenlign" class="nav-links">Sammenlign</a> </li>
-            <li><a href="#hall-of-farms" class="nav-links">Hall of farms</a></li>
+            <li><a href="hall-of-farms.html" class="nav-links">Hall of farms</a></li>
             <div id="navSelection" class="selection"></div>
         </ul>
         <button class="btn main-btn">Registre kvartal</button>
@@ -43,7 +42,7 @@
                 <div>
                     <div>
                         <button class="blank-btn">Gem samling</button>
-                        <button class="normal-btn">samligner</button>
+                        <button class="normal-btn">Samlinger</button>
                     </div>
                 </div>
             </div>
@@ -53,65 +52,43 @@
                         <div id="emne-soegecontainer">
                             <input type="text" placeholder="Søg emner" name="search" class="searchbar">
                         </div>
-                        <button class="emne-collapsible" onclick="flipArrowDyr()">Dyr<img src="images/Group%20180.svg"
-                                id="dyr-arrow" class="arrows"></button>
+                        <button class="emne-collapsible" onclick="flipArrowDyr()">Dyr<img src="images/Group%20180.svg" id="dyr-arrow" class="arrows"></button>
                         <div class="content">
-                            <button class="emne" id="emne-graa">Antal køer<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
-                            <button class="emne" id="">Antal køer afgået<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">Antal køer<img src="images/Group%20233.svg" class="emne-arrow"></button>
+
                         </div>
 
-                        <button class="emne-collapsible" onclick="flipArrowMaelk()">Mælke production<img
-                                src="images/Group%20180.svg" id="maelk-arrow" class="arrows"></button>
+                        <button class="emne-collapsible" onclick="flipArrowMaelk()">Mælke production<img src="images/Group%20180.svg" id="maelk-arrow" class="arrows"></button>
                         <div class="content">
-                            <button class="emne" id="emne-graa">Kg mælk per år<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
-                            <button class="emne" id="">kg mælk per ko<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">Kg mælk per ko<img src="images/Group%20233.svg" class="emne-arrow"></button>
                         </div>
 
-                        <button class="emne-collapsible" onclick="flipArrowEnergi()">Energi<img
-                                src="images/Group%20180.svg" id="energi-arrow" class="arrows"></button>
+                        <button class="emne-collapsible" onclick="flipArrowEnergi()">Energi<img src="images/Group%20180.svg" id="energi-arrow" class="arrows"></button>
                         <div class="content">
-                            <button class="emne" id="emne-graa">Købt strøm, kWh<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
-                                    <button class="emne">Købt varme, kbm<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
-                                    <button class="emne" id="emne-graa">Købt vand, kbm<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
-                            <button class="emne">Produceret strøm, kWh<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
-                            <button class="emne" id="emne-graa">Diesel, liter<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
-                            <button class="emne">Benzin, liter<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
+                            <button class="emne"id="emne-graa">Produceret strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                            <button class="emne" >Diesel, liter<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                            <button class="emne"id="emne-graa">Benzin, liter<img src="images/Group%20233.svg" class="emne-arrow"></button>
                         </div>
 
-                        <button class="emne-collapsible" onclick="flipArrowCo2()">CO2<img src="images/Group%20180.svg"
-                                id="co2-arrow" class="arrows"></button>
+                        <button class="emne-collapsible" onclick="flipArrowCo2()">CO2<img src="images/Group%20180.svg" id="co2-arrow" class="arrows"></button>
                         <div class="content">
-                            <button class="emne" id="emne-graa">CO2 per kg mælk<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
-                            <button class="emne" id="">CO2 aftryk i ton<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">CO2 per diesel brugt<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                            <button class="emne">CO2 per el brugt<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">Samlet CO2-aftryk<img src="images/Group%20233.svg" class="emne-arrow"></button>
                         </div>
 
-                        <button class="emne-collapsible" onclick="flipArrowFoder()">foder<img
-                                src="images/Group%20180.svg" id="foder-arrow" class="arrows"></button>
+                        <button class="emne-collapsible" onclick="flipArrowFoder()">Foder<img src="images/Group%20180.svg" id="foder-arrow" class="arrows"></button>
                         <div class="content">
-                            <button class="emne" id="emne-graa">Købt tør foder<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
-                            <button class="emne" id="">produceret tør foder<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">Tørfoder per ko<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                            <button class="emne">Importeret foder<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">Tørfoder produceret<img src="images/Group%20233.svg" class="emne-arrow"></button>
+
                         </div>
 
-                        <button class="emne-collapsible" onclick="flipArrowOeko()">Økomoni<img
-                                src="images/Group%20180.svg" id="oeko-arrow" class="arrows"></button>
+                        <button class="emne-collapsible" onclick="flipArrowOeko()">Økonomi<img src="images/Group%20180.svg" id="oeko-arrow" class="arrows"></button>
                         <div class="content">
 
-                            <button class="emne" id="emne-graa">Penge sparet per CO2<img src="images/Group%20233.svg"
-                                    class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">Penge sparet per CO2<img src="images/Group%20233.svg" class="emne-arrow"></button>
                         </div>
 
                     </div>
@@ -129,8 +106,7 @@
             <!-- Overview-box-1 -->
             <div id="box-1" class="overview-box-container">
                 <div class="info-button-container">
-                    <p class="info-button"
-                        data-info-box="Forskerne skønner, at man frem mod 2030 kan udtage 50.000 ud af 81.000 hektar lavbundsjord. &#xa; &#xa;Effekten af at dyrke græs eller energiafgrøder på lavbundsjord og samtidig ophøre med dræning er 10-35 ton CO2 pr. år.">
+                    <p class="info-button" data-info-box="Forskerne skønner, at man frem mod 2030 kan udtage 50.000 ud af 81.000 hektar lavbundsjord. &#xa; &#xa;Effekten af at dyrke græs eller energiafgrøder på lavbundsjord og samtidig ophøre med dræning er 10-35 ton CO2 pr. år.">
                         i</p>
                 </div>
                 <div id="progress-element-devider">
@@ -154,8 +130,7 @@
             <!-- Overview-box-2 -->
             <div id="box-2" class="overview-box-container">
                 <div class="info-button-container">
-                    <p class="info-button"
-                        data-info-box="Solceller er en enkel måde at producere vedvarende energi og kræver ikke så meget vedligeholdelse. Med den nuværende elpris og priser for solceller tager det 12-25 år at betale et solcelleanlæg tilbage. &#xa;Så det kræver en investering og en lang tilbagebetalingstid.">
+                    <p class="info-button" data-info-box="Solceller er en enkel måde at producere vedvarende energi og kræver ikke så meget vedligeholdelse. Med den nuværende elpris og priser for solceller tager det 12-25 år at betale et solcelleanlæg tilbage. &#xa;Så det kræver en investering og en lang tilbagebetalingstid.">
                         i</p>
                 </div>
                 <div class="devider">
@@ -179,8 +154,7 @@
             <!-- Overview-box-3 -->
             <div id="box-3" class="overview-box-container">
                 <div class="info-button-container">
-                    <p class="info-button"
-                        data-info-box="Majs er meget klimaeffektivt i koens vom, men ikke i marken. &#xa; &#xa;Græs er klimaeffektivt i marken, men mindre i vommen.">
+                    <p class="info-button" data-info-box="Majs er meget klimaeffektivt i koens vom, men ikke i marken. &#xa; &#xa;Græs er klimaeffektivt i marken, men mindre i vommen.">
                         i</p>
                 </div>
                 <div class="small-box-deivider">
@@ -204,8 +178,7 @@
             <!-- Overview-box-4 -->
             <div id="box-4" class="overview-box-container">
                 <div class="info-button-container">
-                    <p class="info-button"
-                        data-info-box="Et typisk solcelleanlæg på 10-15 m2 kan spare dig ca. 2.000 kr. årligt på elregningen. Samtidig sænker det dit CO2-udslip med ca. 0,6 ton.">
+                    <p class="info-button" data-info-box="Et typisk solcelleanlæg på 10-15 m2 kan spare dig ca. 2.000 kr. årligt på elregningen. Samtidig sænker det dit CO2-udslip med ca. 0,6 ton.">
                         i</p>
                 </div>
                 <div id="money-saved-container">
@@ -221,8 +194,5 @@
     <script src="./js/navigation.js"></script>
     <script src="./js/chart.js"></script>
     <script src="./js/oversigt.js"></script>
-</body>
-
-
-</html>
+</body></html>
    

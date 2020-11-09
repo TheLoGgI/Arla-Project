@@ -27,6 +27,8 @@ body {
     background-color: var(--bg-color);
 }
 
+
+
 /*-------------------------header--------------------------------------*/
 
 .header-logo {
@@ -230,7 +232,7 @@ main {
 }
 
 .dyr-arrow-flip {
-    transform: scale(-1);
+    transform: scaleY(-1);
     transition: 0.3s;
 }
 

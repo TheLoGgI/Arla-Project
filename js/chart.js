@@ -5,7 +5,7 @@ let grath = new Chart(ctx, {
     data: {
         labels: ['2016', '2017', '2018', '2019', '2020'],
         datasets: [{
-            label: 'kg milk pr year-cow',
+            label: 'Kg mælk per års ko',
             data: [7830.036, 8830.039 , 9927.232, 9075.765, 10185.449],
             backgroundColor: [
                 'rgba(255, 99, 132, 0)',
