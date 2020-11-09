@@ -159,29 +159,19 @@ main {
     padding: 0 .5rem 0 0
 }
 
-.flex-graf {
-    display: flex;
-    justify-content: space-between;
-}
-
-.canvas-grath {
-    /* max-width: 100%; */
-    max-height: 400px;
-    background-color: white;
-}
-
 .emne-hidden {
     width: 0px !important;
     padding: 0 !important;
     transition: 0.2s;
     overflow: hidden;
-    
 }
 
 #emne-container {
     width: 25%;
     transition: 0.2s;
-    
+    max-height: 450px;
+    overflow-y: scroll;
+    background-color: var(--bg-white)
 }
 
 #emne-soegecontainer {
@@ -209,6 +199,7 @@ main {
     width: 100%;
     border: none;
     outline: none;
+    direction: ltr;
 }
 
 .emne {
@@ -225,6 +216,7 @@ main {
     outline: none;
     display: flex;
     align-items: baseline;
+    direction: ltr;
 }
 
 #emne-graa {
@@ -253,6 +245,17 @@ main {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
+}
+
+.flex-graf {
+    display: flex;
+    justify-content: space-between;
+}
+
+.canvas-grath {
+    /* max-width: 100%; */
+    max-height: 450px;
+    background-color: white;
 }
 
 /*-------------------------oversigter-block--------------------------------------*/
@@ -309,9 +312,35 @@ main {
     margin: 10px;
     text-align: center;
     color: white;
+    position: relative;
+}
+
+.info-button:hover::after {
+    content: attr(data-info-box);
+    position: absolute;
+    bottom: 5ch;
+    right: -2ch;
+    color: gray;
+    width: 30ch;
+    background-color: white;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2ch;
+    white-space: pre-wrap;
+    display: inline-block;
+    text-align: left;
 }
 
 /* ----------Box-1-content------------- */
+
+#progress-element-devider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    padding-bottom: 5vh;
+}
 
 #box-1-intro-text {
     text-align: center;
@@ -329,6 +358,13 @@ main {
     text-align: center;
     font-size: 2.2em;
     color: #619661;
+}
+
+#co2-progress-bar-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #co2-progress-bar {
@@ -464,11 +500,11 @@ main {
 }
 
 #money-saved-result {
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 10px;
     color: #619661;
 }
 
 #money-saved-text {
-    font-size: 1.2em;
+    font-size: 1.6em;
 }

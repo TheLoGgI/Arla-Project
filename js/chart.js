@@ -54,6 +54,8 @@ let grath = new Chart(ctx, {
         layout: {
             padding: {
                 top: 50,
+                bottom:50 ,
+                right:50,
                 left: 25
             }
         },
@@ -63,7 +65,7 @@ let grath = new Chart(ctx, {
             align: 'center',
             labels: {
                 fontColor: "black",
-                fontSize: 18,
+                fontSize: 25,
                 padding: 0
             }
         },
@@ -72,7 +74,7 @@ let grath = new Chart(ctx, {
             titleAlign: 'left',
             titleFontFamily: 'Arla interface',
             bodyFontSize: 18,
-            titleFontSize: 20,
+            titleFontSize: 30,
             footerFontSize: 18,
 
         }
