@@ -12,7 +12,7 @@
     --main-normal: #619661;
     --main-light: #99B87B;
     --darkblue-color: #007595;
-    --shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    --shadow: 0px 0px 0.6px .2px #314040;
 }
 
 * {
@@ -159,27 +159,23 @@ main {
     padding: 0 .5rem 0 0
 }
 
-.flex-graf {
-    display: flex;
-    justify-content: space-between;
-}
-
-.canvas-grath {
-    /* max-width: 100%; */
-    max-height: 400px;
-    background-color: white;
-}
 
 .emne-hidden {
     width: 0px !important;
     padding: 0 !important;
     transition: 0.2s;
     overflow: hidden;
+    
 }
 
 #emne-container {
     width: 25%;
     transition: 0.2s;
+    max-height: 450px;
+        overflow:visible;
+    direction:rtl;
+
+    
 }
 
 #emne-soegecontainer {
@@ -207,6 +203,7 @@ main {
     width: 100%;
     border: none;
     outline: none;
+     direction:ltr;
 }
 
 .emne {
@@ -223,6 +220,7 @@ main {
     outline: none;
     display: flex;
     align-items: baseline;
+    direction:ltr;
 }
 
 #emne-graa {
@@ -253,6 +251,17 @@ main {
     background-color: #f1f1f1;
 }
 
+.flex-graf {
+    display: flex;
+    justify-content: space-between;
+}
+
+.canvas-grath {
+    /* max-width: 100%; */
+    max-height: 450px;
+    background-color: white;
+}
+
 /*-------------------------oversigter-block--------------------------------------*/
 
 /*-------------------------oversigter-block--------------------------------------*/
@@ -272,6 +281,7 @@ main {
     grid-area: box1;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #box-2 {
@@ -327,15 +337,6 @@ main {
 
 /* ----------Box-1-content------------- */
 
-#progress-element-devider {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    margin-bottom: 5vh;
-}
-
 #box-1-intro-text {
     text-align: center;
     color: gray;
@@ -350,15 +351,8 @@ main {
 
 #box-1-result-percentage {
     text-align: center;
-    font-size: 3em;
+    font-size: 2.2em;
     color: #619661;
-}
-
-#co2-progress-bar-container {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #co2-progress-bar {
