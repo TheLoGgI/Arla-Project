@@ -172,8 +172,10 @@ main {
     width: 25%;
     transition: 0.2s;
     max-height: 450px;
-        overflow:visible;
-    direction:rtl;
+        overflow-y:scroll;
+  
+    background-color: var(--bg-white)
+    
 
     
 }
