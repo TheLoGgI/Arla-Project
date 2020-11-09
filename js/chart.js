@@ -1,6 +1,12 @@
 let ctx = document.getElementById('graf').getContext('2d');
 let chartData
 
+(function() {
+    fetch("../json/csvjson.json")
+    .then(response => response.json())
+    .then(data => chartData = data)  
+})()
+
 let chart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -84,34 +90,30 @@ let chart = new Chart(ctx, {
 
 function dataHandler(){
     const emner = document.querySelectorAll(".emne");
-    console.log(emner);
+    // console.log(emner);
     for(const emne of emner){
-        emne.addEventListener("click", e=> {
-            
-            console.log(e.currentTarget.textContent)
-
-
-            // replaceData(chart, )
+        emne.addEventListener("click", e => {
+            for (const chartSet of chartData) {
+                // console.log(chartSet.label, e.currentTarget.textContent);
+                if (e.currentTarget.textContent === chartSet.label) {
+                    // console.log(chartSet.label === e.currentTarget.textContent);
+                    replaceData(chart, chartSet)
+                } 
+            }
         } )
         
     }
 }
 
-
-getData()
 dataHandler()
 
-function getData(){
-    fetch("../json/csvjson.json")
-        .then(response => response.json())
-        .then(data => console.log(data))  
-}
-
 function replaceData(chart, data){
-    console.log(chart)
-    //chart.data.datasets = data.data
-    chart.data.labels = data.yearsLabel
-  
-    
+    chart.data.datasets[0].label = data.label
+    chart.data.datasets[0].data = data.data
+    chart.options.scales.yAxes[0].ticks.callback = function(value, index, values) {
+        return value + ` ${data.unit}`
+    }
+
+    chart.update()
 }
 
