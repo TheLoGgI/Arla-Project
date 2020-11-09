@@ -255,6 +255,7 @@ header li {
     color: white;
     margin: 5px;
     padding: 10px;
+    font-size: 14px;
     border: none;
     border-radius: 5px;
     width: 100px;
@@ -266,6 +267,7 @@ header li {
     color: #006A38;
     margin: 5px;
     padding: 10px;
+    font-size: 14px;
     border-color: #006A38;
     border-radius: 5px;
     width: 100px;
