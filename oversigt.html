@@ -5,7 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <title>Arlagården Plus</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
     <link href="./css/oversigt.css" rel="stylesheet" />
@@ -51,30 +52,44 @@
                         <div id="emne-soegecontainer">
                             <input type="text" placeholder="Søg emner" name="search" class="searchbar">
                         </div>
-                        <button class="emne-collapsible" onclick="flipArrowDyr()">Dyr<img src="images/Group%20180.svg" id="dyr-arrow" class="arrows"></button>
+                        <button class="emne-collapsible" onclick="flipArrowDyr()">Dyr<img src="images/Group%20180.svg"
+                                id="dyr-arrow" class="arrows"></button>
                         <div class="content">
-                            <button class="emne"  id="emne-graa">Antal køer<img src="images/Group%20233.svg" class="emne-arrow"></button>
-                            <button class="emne" id="">Antal køer afgået<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">Antal køer<img src="images/Group%20233.svg"
+                                    class="emne-arrow"></button>
+                            <button class="emne" id="">Antal køer afgået<img src="images/Group%20233.svg"
+                                    class="emne-arrow"></button>
                         </div>
 
-                        <button class="emne-collapsible" onclick="flipArrowMaelk()">Mælke production<img src="images/Group%20180.svg" id="maelk-arrow" class="arrows"></button>
+                        <button class="emne-collapsible" onclick="flipArrowMaelk()">Mælke production<img
+                                src="images/Group%20180.svg" id="maelk-arrow" class="arrows"></button>
                         <div class="content">
-                            <button class="emne"  id="emne-graa">Kg mælk per år<img src="images/Group%20233.svg" class="emne-arrow"></button>
-                            <button class="emne" id="">kg mælk per ko<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">Kg mælk per år<img src="images/Group%20233.svg"
+                                    class="emne-arrow"></button>
+                            <button class="emne" id="">kg mælk per ko<img src="images/Group%20233.svg"
+                                    class="emne-arrow"></button>
                         </div>
 
-                        <button class="emne-collapsible" onclick="flipArrowEnergi()">Energi<img src="images/Group%20180.svg" id="energi-arrow" class="arrows"></button>
+                        <button class="emne-collapsible" onclick="flipArrowEnergi()">Energi<img
+                                src="images/Group%20180.svg" id="energi-arrow" class="arrows"></button>
                         <div class="content">
-                            <button class="emne" id="emne-graa">Købt strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
-                            <button class="emne">Produceret strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
-                            <button class="emne" id="emne-graa">Diesel, liter<img src="images/Group%20233.svg" class="emne-arrow"></button>
-                            <button class="emne">Benzin, liter<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">Købt strøm, kWh<img src="images/Group%20233.svg"
+                                    class="emne-arrow"></button>
+                            <button class="emne">Produceret strøm, kWh<img src="images/Group%20233.svg"
+                                    class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">Diesel, liter<img src="images/Group%20233.svg"
+                                    class="emne-arrow"></button>
+                            <button class="emne">Benzin, liter<img src="images/Group%20233.svg"
+                                    class="emne-arrow"></button>
                         </div>
 
-                        <button class="emne-collapsible" onclick="flipArrowCo2()">CO2<img src="images/Group%20180.svg" id="co2-arrow" class="arrows"></button>
+                        <button class="emne-collapsible" onclick="flipArrowCo2()">CO2<img src="images/Group%20180.svg"
+                                id="co2-arrow" class="arrows"></button>
                         <div class="content">
-                            <button class="emne"  id="emne-graa">CO2 per kg mælk<img src="images/Group%20233.svg" class="emne-arrow"></button>
-                            <button class="emne" id="">CO2 aftryk i ton<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">CO2 per kg mælk<img src="images/Group%20233.svg"
+                                    class="emne-arrow"></button>
+                            <button class="emne" id="">CO2 aftryk i ton<img src="images/Group%20233.svg"
+                                    class="emne-arrow"></button>
                         </div>
 
                         <button class="emne-collapsible" onclick="flipArrowFoder()">foder<img src="images/Group%20180.svg" id="foder-arrow" class="arrows"></button>
@@ -83,9 +98,11 @@
                             <button class="emne" id="">produceret tør foder<img src="images/Group%20233.svg" class="emne-arrow"></button>
                         </div>
 
-                        <button class="emne-collapsible" onclick="flipArrowOeko()">Økomoni<img src="images/Group%20180.svg" id="oeko-arrow" class="arrows"></button>
+                        <button class="emne-collapsible" onclick="flipArrowOeko()">Økomoni<img
+                                src="images/Group%20180.svg" id="oeko-arrow" class="arrows"></button>
                         <div class="content">
-                            <button class="emne"  id="emne-graa">Penge sparet per CO2<img src="images/Group%20233.svg" class="emne-arrow"></button>
+                            <button class="emne" id="emne-graa">Penge sparet per CO2<img src="images/Group%20233.svg"
+                                    class="emne-arrow"></button>
                         </div>
 
                     </div>
@@ -105,16 +122,21 @@
                 <div class="info-button-container">
                     <p class="info-button">i</p>
                 </div>
-                <p id="box-1-intro-text">Arla har et mål om at reducere CO2-udledningen<br>med 30% procent inden 2030
-                </p>
-                <h4 id="box-1-result-text">Din gård har reduceret<br>CO2-udledingen med:</h4>
-                <h3 id="box-1-result-percentage">10%</h3>
-                <div id="co2-progress-bar">
-                    <div id="bar"></div>
-                </div>
-                <div id="bar-text-container">
-                    <p class="bar-text">0%</p>
-                    <p class="bar-text">30%</p>
+                <div id="progress-element-devider">
+                    <p id="box-1-intro-text">Arla har et mål om at reducere CO2-udledningen<br>med 30% procent inden
+                        2030
+                    </p>
+                    <h4 id="box-1-result-text">Din gård har reduceret<br>CO2-udledingen med:</h4>
+                    <div id="co2-progress-bar-container">
+                        <h3 id="box-1-result-percentage">10%</h3>
+                        <div id="co2-progress-bar">
+                            <div id="bar"></div>
+                        </div>
+                        <div id="bar-text-container">
+                            <p class="bar-text">0%</p>
+                            <p class="bar-text">30%</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -184,4 +206,8 @@
     <script src="./js/oversigt.js"></script>
 </body>
 
+<<<<<<< Updated upstream </html>
+    =======
+
 </html>
+>>>>>>> Stashed changes
