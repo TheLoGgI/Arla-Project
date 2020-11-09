@@ -133,7 +133,7 @@ header li {
     grid-row: 8;
 }
 
-#button {
+.button {
     color: white;
     background-color: #096B3B;
     font-size: 16px;
@@ -144,17 +144,17 @@ header li {
     cursor: pointer;
 }
 
-#icon {
+.icon {
     width: 30px;
 }
 
-#arrow-icon {
+.arrow-icon {
     height: 17px;
     float: right;
     padding-right: 15px;
 }
 
-#arrow-icon2 {
+.arrow-icon2 {
     height: 14px;
     margin-right: 5px;
 }
@@ -173,34 +173,6 @@ header li {
   height: 30px;
 }
 
-.dropbtn:hover, .dropbtn:focus {
-  background-color: white;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd}
-
-.show {display:block;}
 
 /* rank liste */
 .flex-container {
@@ -250,7 +222,7 @@ header li {
   margin-left: 20px;
 }
 
-#rank-btn1 {
+.rank-btn1 {
     background-color: #006A38;
     color: white;
     margin: 5px;
@@ -262,7 +234,7 @@ header li {
     cursor: pointer;
 }
 
-#rank-btn2 {
+.rank-btn2 {
     background-color:white;
     color: #006A38;
     margin: 5px;

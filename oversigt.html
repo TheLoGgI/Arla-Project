@@ -22,7 +22,7 @@
             <li><a href="hall-of-farms.html" class="nav-links">Hall of farms</a></li>
             <div id="navSelection" class="selection"></div>
         </ul>
-        <button class="btn main-btn">Registre kvartal</button>
+        <button class="btn main-btn">Registrer kvartal</button>
     </header>
     <main>
         <section class="oversigt-section" id="registre-nyt-kvartal-plus">
@@ -65,11 +65,12 @@
 
                         <button class="emne-collapsible" onclick="flipArrowEnergi()">Energi<img src="images/Group%20180.svg" id="energi-arrow" class="arrows"></button>
                         <div class="content">
+
                             <button class="emne"id="emne-graa">Produceret strøm, kWh<img src="images/Group%20233.svg" class="emne-arrow"></button>
                             <button class="emne" >Diesel, liter<img src="images/Group%20233.svg" class="emne-arrow"></button>
                             <button class="emne"id="emne-graa">Benzin, liter<img src="images/Group%20233.svg" class="emne-arrow"></button>
-                        </div>
 
+                        </div>
                         <button class="emne-collapsible" onclick="flipArrowCo2()">CO2<img src="images/Group%20180.svg" id="co2-arrow" class="arrows"></button>
                         <div class="content">
                             <button class="emne" id="emne-graa">CO2 per diesel brugt<img src="images/Group%20233.svg" class="emne-arrow"></button>
@@ -116,12 +117,14 @@
                     <h4 id="box-1-result-text">Din gård har reduceret<br>CO2-udledingen med:</h4>
                     <div id="co2-progress-bar-container">
                         <h3 id="box-1-result-percentage">10%</h3>
-                        <div id="co2-progress-bar">
-                            <div id="bar"></div>
-                        </div>
-                        <div id="bar-text-container">
-                            <p class="bar-text">0%</p>
-                            <p class="bar-text">30%</p>
+                        <div id="co2-progress-bar-container">
+                            <div id="co2-progress-bar">
+                                <div id="bar"></div>
+                            </div>
+                            <div id="bar-text-container">
+                                <p class="bar-text">0%</p>
+                                <p class="bar-text">30%</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -194,5 +197,7 @@
     <script src="./js/navigation.js"></script>
     <script src="./js/chart.js"></script>
     <script src="./js/oversigt.js"></script>
+
 </body></html>
    
+

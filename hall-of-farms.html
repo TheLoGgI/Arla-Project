@@ -9,7 +9,7 @@
         content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <title>Arlagården Plus - Hall of farms</title>
     <link href="./css/hall-of-farms.css" rel="stylesheet" />
-     <link href="./css/font-face.css" rel="stylesheet" />
+    <link href="./css/font-face.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -19,14 +19,14 @@
         <p class="header-logo">Arlagården <span>Plus</span></p>
 
         <ul id="headernav" class="header-nav">
-            <li class="selected"><a href="#oversigt" class="nav-links">Oversigt</a></li>
+            <li><a href="oversigt.html" class="nav-links">Oversigt</a></li>
             <li><a href="#registerings-historik" class="nav-links">Registerings historik</a> </li>
             <li><a href="#sammenlign" class="nav-links">Sammenlign</a> </li>
-            <li><a href="#hall-of-farms" class="nav-links">Hall of farms</a></li>
+            <li class="selected"><a href="#hall-of-farms" class="nav-links">Hall of farms</a></li>
             <div id="navSelection" class="selection"></div>
         </ul>
 
-        <button class="btn main-btn">Registre kvartal</button>
+        <button class="btn main-btn">Registrer kvartal</button>
     </header>
 
     <div class="grid-box">
@@ -36,40 +36,40 @@
         </div>
 
         <div class="grid-item item2">
-            <button type="button" id="button"><img src="images/global-icon.png" id="icon"
+            <button onclick="hideOptionFunction()" class="button"><img src="images/global-icon.png" class="icon"
                     alt="flag-icon"><br>Global</button>
         </div>
 
         <div class="grid-item item3">
-            <button type="button" id="button"><img src="images/flag-icon.png" id="icon"
+            <button onclick="showOptionFunction()" class="button"><img src="images/flag-icon.png" class="icon"
                     alt="flag-icon"><br>Land</button>
         </div>
 
-        <div class="grid-item item4">
-            <div class="dropdown">
-                <button onclick="dropDownFunction()" class="dropbtn">Danmark<img src="images/arrow.png" id="arrow-icon"
-                        alt="arrow"></button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="#">Danmark</a>
-                    <a href="#">Tyskland</a>
-                    <a href="#">Sverige</a>
-                    <a href="#">Norge</a>
-                </div>
-            </div>
+
+        <div class="grid-item item4 country">
+            <form action="/action_page.php">
+                <select name="land" class="dropbtn">
+                    <option value="Danmark">Danmark</option>
+                    <option value="Tyskland">Tyskland</option>
+                    <option value="Sverige">Sverige</option>
+                    <option value="Norge">Norge</option>
+                </select>
+            </form>
         </div>
 
-        <div class="grid-item item5">
-            <div class="dropdown">
-                <button onclick="dropDownFunction2()" class="dropbtn">Region<img src="images/arrow.png" id="arrow-icon"
-                        alt="arrow"></button>
-                <div id="myDropdown2" class="dropdown-content">
-                    <a href="#">Nordjylland</a>
-                    <a href="#">Midtjylland</a>
-                    <a href="#">Syd Danmark</a>
-                    <a href="#">Sjælland</a>
-                </div>
-            </div>
+        <div class="grid-item item5 country">
+            <form action="/action_page.php">
+                <select name="region" class="dropbtn">
+                    <option value="Region">Region</option>
+                    <option value="Nordjylland">Nordjylland</option>
+                    <option value="Midtjylland">Midtjylland</option>
+                    <option value="Syd Danmark">Syd Danmark</option>
+                    <option value="Sjælland">Sjælland</option>
+                </select>
+            </form>
         </div>
+
+
         <div class="grid-item item6">
             <div class="flex-container">
                 <div style="flex-basis: 100px"><b>Rank</b></div>
@@ -94,9 +94,9 @@
                     <div style="flex-basis: 200px">Danmark</div>
                     <div style="flex-basis: 200px">Midtjylland</div>
                     <div style="flex-basis: 200px">30%</div>
-                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                    <button type="button" class="rank-btn1"><img src="images/arrow2.png" class="arrow-icon2"
                             alt="arrow">Historie</button>
-                    <button type="button" id="rank-btn2">Sammenlign</button>
+                    <button type="button" class="rank-btn2">Sammenlign</button>
                 </div>
             </div>
             <div class="grid-item item6">
@@ -106,9 +106,9 @@
                     <div style=" flex-basis: 200px">Danmark</div>
                     <div style="flex-basis: 200px">Midtjylland</div>
                     <div style="flex-basis: 200px">29%</div>
-                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                    <button type="button" class="rank-btn1"><img src="images/arrow2.png" class="arrow-icon2"
                             alt="arrow">Historie</button>
-                    <button type="button" id="rank-btn2">Sammenlign</button>
+                    <button type="button" class="rank-btn2">Sammenlign</button>
                 </div>
             </div>
             <div class="grid-item item6">
@@ -118,9 +118,9 @@
                     <div style=" flex-basis: 200px">Danmark</div>
                     <div style="flex-basis: 200px">Syd Danmark</div>
                     <div style="flex-basis: 200px">26%</div>
-                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                    <button type="button" class="rank-btn1"><img src="images/arrow2.png" class="arrow-icon2"
                             alt="arrow">Historie</button>
-                    <button type="button" id="rank-btn2">Sammenlign</button>
+                    <button type="button" class="rank-btn2">Sammenlign</button>
                 </div>
             </div>
             <div class="grid-item item6">
@@ -130,9 +130,9 @@
                     <div style=" flex-basis: 200px">Danmark</div>
                     <div style="flex-basis: 200px">Nordjylland</div>
                     <div style="flex-basis: 200px">25%</div>
-                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                    <button type="button" class="rank-btn1"><img src="images/arrow2.png" class="arrow-icon2"
                             alt="arrow">Historie</button>
-                    <button type="button" id="rank-btn2">Sammenlign</button>
+                    <button type="button" class="rank-btn2">Sammenlign</button>
                 </div>
             </div>
             <div class="grid-item item6">
@@ -142,9 +142,9 @@
                     <div style=" flex-basis: 200px">Danmark</div>
                     <div style="flex-basis: 200px">Nordjylland</div>
                     <div style="flex-basis: 200px">24%</div>
-                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                    <button type="button" class="rank-btn1"><img src="images/arrow2.png" class="arrow-icon2"
                             alt="arrow">Historie</button>
-                    <button type="button" id="rank-btn2">Sammenlign</button>
+                    <button type="button" class="rank-btn2">Sammenlign</button>
                 </div>
             </div>
             <div class="grid-item item6">
@@ -153,9 +153,9 @@
                     <div>Kastanjegården</div>
                     <div style="flex-basis: 200px">Danmark</div>
                     <div style="flex-basis: 200px">Midtjylland</div>
-                    <div style="flex-basis: 200px">23%</div><button type="button" id="rank-btn1"><img
-                            src="images/arrow2.png" id="arrow-icon2" alt="arrow">Historie</button>
-                    <button type="button" id="rank-btn2">Sammenlign</button>'
+                    <div style="flex-basis: 200px">23%</div><button type="button" class="rank-btn1"><img
+                            src="images/arrow2.png" class="arrow-icon2" alt="arrow">Historie</button>
+                    <button type="button" class="rank-btn2">Sammenlign</button>'
                 </div>
             </div>
             <div class="grid-item item6">
@@ -165,9 +165,9 @@
                     <div style="flex-basis: 200px">Danmark</div>
                     <div style="flex-basis: 200px">Sjælland</div>
                     <div style="flex-basis: 200px">20%</div>
-                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                    <button type="button" class="rank-btn1"><img src="images/arrow2.png" class="arrow-icon2"
                             alt="arrow">Historie</button>
-                    <button type="button" id="rank-btn2">Sammenlign</button>
+                    <button type="button" class="rank-btn2">Sammenlign</button>
                 </div>
             </div>
             <div class="grid-item item6">
@@ -177,9 +177,9 @@
                     <div style="flex-basis: 200px">Danmark</div>
                     <div style="flex-basis: 200px">Syd Danmark</div>
                     <div style="flex-basis: 200px">19%</div>
-                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                    <button type="button" class="rank-btn1"><img src="images/arrow2.png" class="arrow-icon2"
                             alt="arrow">Historie</button>
-                    <button type="button" id="rank-btn2">Sammenlign</button>
+                    <button type="button" class="rank-btn2">Sammenlign</button>
                 </div>
             </div>
             <div class="grid-item item6">
@@ -189,9 +189,9 @@
                     <div style="flex-basis: 200px">Danmark</div>
                     <div style="flex-basis: 200px">Syd Danmark</div>
                     <div style="flex-basis: 200px">18%</div>
-                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                    <button type="button" class="rank-btn1"><img src="images/arrow2.png" class="arrow-icon2"
                             alt="arrow">Historie</button>
-                    <button type="button" id="rank-btn2">Sammenlign</button>
+                    <button type="button" class="rank-btn2">Sammenlign</button>
                 </div>
             </div>
             <div class="grid-item item6">
@@ -201,9 +201,9 @@
                     <div style="flex-basis: 200px">Danmark</div>
                     <div style="flex-basis: 200px">Nordjylland</div>
                     <div style="flex-basis: 200px">15%</div>
-                    <button type="button" id="rank-btn1"><img src="images/arrow2.png" id="arrow-icon2"
+                    <button type="button" class="rank-btn1"><img src="images/arrow2.png" class="arrow-icon2"
                             alt="arrow">Historie</button>
-                    <button type="button" id="rank-btn2">Sammenlign</button>
+                    <button type="button" class="rank-btn2">Sammenlign</button>
                 </div>
             </div>
         </div>
